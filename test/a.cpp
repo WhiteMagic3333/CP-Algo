@@ -7,6 +7,7 @@ using namespace std;
 typedef long long ll;
 #define mod 1000000007
 vector<bool> prime;
+//testing
  
 void sieve(ll n)
 {
