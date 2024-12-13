@@ -13,7 +13,7 @@ typedef pair<int, int> pi;
 #define rlp(i,a,b) for (int i = b; i >= b; i--)
 #define mod 1000000007
 vector<bool> prime;
-
+//comment
 void sieve(ll n)
 {
 	prime.resize(n + 1, true);
