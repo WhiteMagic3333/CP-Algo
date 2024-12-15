@@ -1,0 +1,1 @@
+make sure all the cpp files are opened at first while it highlights at A.cpp
