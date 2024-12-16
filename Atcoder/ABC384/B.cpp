@@ -34,10 +34,28 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 	std::cout << '\n';
 	return out;
 }
+
+void process(int d, int a, int &r) {
+	int low = 1200, high = 2399; 
+	if (d == 1) {
+		low = 1600;
+		high = 2799;
+	}
+	if (r >= low && r <= high) {
+		r += a;
+	}
+}
  
 void solve()
 {
-	
+	int n, r;
+	cin >> n >> r;
+	while(n--) {
+		int d, a;
+		cin >> d >> a;
+		process(d, a, r);
+	}
+	cout << r;
 }
  
 int main()
