@@ -25,3 +25,11 @@ Together, they cover a broad spectrum: building strong habits, leveraging early 
 
 
 
+About Books
+_______________________________________________________________________________________
+
+Head First Design Pattern
+10 pages per day ()
+
+System's design Interview an insider's guide
+6 page per day
