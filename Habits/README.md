@@ -33,3 +33,10 @@ Head First Design Pattern
 
 System's design Interview an insider's guide
 6 page per day
+
+
+Quotes
+_______________________________________________________________________
+
+Taken from Atomic Habits
+1. Focus on building systems of habits rather than obsessing over goals
