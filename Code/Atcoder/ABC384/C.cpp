@@ -36,7 +36,7 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 }
  
 void solve()
-{
+{f
         int n = nums.size();
         if (n == 0 || nums[0] > nums[1]) {
                 return 0;
