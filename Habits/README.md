@@ -39,4 +39,8 @@ Quotes
 _______________________________________________________________________
 
 Taken from Atomic Habits
+
+Chapter 1:
+
 1. Focus on building systems of habits rather than obsessing over goals
+2. Start small and trust in the power of incremental progress
