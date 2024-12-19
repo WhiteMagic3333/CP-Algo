@@ -99,6 +99,10 @@ void solve()
 		}
 	}
 
+	string a;
+	int b;
+	b = a;
+
 	cout << ans;
 }
  
