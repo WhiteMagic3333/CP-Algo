@@ -32,4 +32,4 @@ g++ -std=c++11 magic.h || { echo "Failed to precompile magic.h"; exit 1; }
 echo "Folder '$folder_name' created with files A.cpp, B.cpp, C.cpp, D.cpp, E.cpp, inputf.in, outputf.out, and precompiled magic.h."
 
 # Open the files in Sublime Text and set the layout
-subl --command "focus_group {\"group\": 0}" && subl A.cpp && subl --command "focus_group {\"group\": 1}" && subl inputf.in && subl --command "focus_group {\"group\": 2}" && subl outputf.out && subl --command "focus_group {\"group\": 0}"
+subl --command "focus_group {\"group\": 1}" && subl inputf.in && subl --command "focus_group {\"group\": 2}" && subl outputf.out && subl --command "focus_group {\"group\": 0}" && subl E.cpp && subl E.cpp && subl D.cpp && subl C.cpp && subl B.cpp && subl A.cpp 
