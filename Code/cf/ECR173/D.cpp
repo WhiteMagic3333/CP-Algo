@@ -37,10 +37,36 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
  
 void solve()
 {
+	// issue
+	// I asked in my mind that what should be the
+	// maximum gap between, two primes
+	// what I should have asked
+	// Maximum gap between two co primes
+
 	ll l, r, h;
 	cin >> l >> r >> h;
-	ll high = (r / h) * h;
-	ll low = (low)
+	ll low = (l + h - 1) / h;
+	ll high = r / h;
+	if (low > high) {
+		return void(cout << "-1 -1");
+	} else if (low == high) {
+		if (low != 1) {
+			return void(cout << "-1 -1");
+		} else {
+			return void(cout << h << " " << h);
+		}
+	} else {
+		for (ll d = (high - low); d >= 0; d--) {
+			for (ll k = low; k + d <= high; k++) {
+				ll l1 = k;
+				ll l2 = k + d;
+				if (__gcd(l1, l2) == 1) {
+					return void (cout << l1 * h << " " << l2 * h);
+				}
+			}
+		}
+	}
+	return void(cout << "-1 -1");
 }
  
 int main()
