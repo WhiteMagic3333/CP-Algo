@@ -6,7 +6,7 @@
 1. Always look for patterns
 2. Try thinking for different approaches (dp, binary search, math, graphs, cycle finding) as well
 3. multiset.erase(multiset.find(element)) instead of multiset.erase(element)
-3. 
+4. Capital YES (only in codeforces)
 
 
 Additional Notes 
