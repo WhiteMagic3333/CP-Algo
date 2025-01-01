@@ -6,12 +6,7 @@
 1. Always look for patterns
 2. Try thinking for different approaches (dp, binary search, math, graphs, cycle finding) as well
 3. multiset.erase(multiset.find(element)) instead of multiset.erase(element)
-4. Capital YES (only in codeforces)
-
-
-Additional Notes 
-
-1. For problems having both 1 based and 0 based indexing, finding a clean coding design, resuable
+4. Capital YES (only in codeforces) (Ensure Ouput is in lowercase/uppercase as per the problem)
 
 Varible names
 ga = greates_after (suffix array)
@@ -32,14 +27,18 @@ Total 	  =   :(
 
 _________________________________________________________________________________________
 
-#define int long long save ->read this
-custom_sqrt alternative
-dfs direction template
-read ioi maths
-
-
 imp
-Understand mkfile
-https://github.com/ShivamBohra93/CP-Algo/commit/4ae4d098a527abb5aba35f1f25645a5a73162c23
+1. Understand mkfile
+https://github.com/ShivamBohra93/CP-Algo/commit/4ae4d098a527abb5aba35f1f25645a5a73162c23 
+(Under Progress)
+
+
+
+2. For problems having both 1 based and 0 based indexing, finding a clean coding design, resuable
+3. #define int long long save ->read this
+4. custom_sqrt alternative
+5. dfs direction template
+6. dfs on an array (https://atcoder.jp/contests/abc386/tasks/abc386_e)
+7. read ioi maths
 
 Complete templates/Generic_Template/debug.cpp
