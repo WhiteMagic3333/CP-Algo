@@ -2,6 +2,7 @@
 
 
 
+0. Don't hurry. Write the perfect code at once.
 0. Try writing a clean simple running code.
 1. Always look for patterns
 2. Try thinking for different approaches (dp, binary search, math, graphs, cycle finding) as well
@@ -42,3 +43,7 @@ https://github.com/ShivamBohra93/CP-Algo/commit/4ae4d098a527abb5aba35f1f25645a5a
 7. read ioi maths
 
 Complete templates/Generic_Template/debug.cpp
+
+
+1. Instead of searching for substrings one can use
+	str.find(substr) != string::npos, making sure len(substr) <= str

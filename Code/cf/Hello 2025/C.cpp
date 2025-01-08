@@ -1,9 +1,10 @@
+#include <bitset>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
 #include<bits/stdc++.h>
 #endif
-#include<bitset>
+#include <set>
 using namespace std;
 typedef long long ll;
 #define mod 1000000007
@@ -36,65 +37,64 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 	return out;
 }
 
-int calc(int a, int b) {
-	bitset<32> _a(a);
-	bitset<32> _b(b);
-	bitset<32> _c;
-	// cout << _a << '\n' << _b << '\n';
-	int in = 0;
-	for (int i = 31; i >= 0; i--) {
-		if (_a[i] != _b[i]) {
-			_c[i] = 0;
-			in = i;
-			//two choices
-			// take _c[i] = 0 and don't let it be smaller than a
-			// or take _c[1] = 1 and don't let it be bigger than b
+ll fun(ll l, ll r) {
+	bitset<64> low(l), high(r);
+	bitset<64> mid;
+	for (int i = 63; i >= 0; i--) {
+		if (low[i] != high[i]) {
+			//highest bit differs
+			//find first repeating bit
+			bool found = false;
+			for (int j = i - 1; j >= 0; j--) {
+				if (low[j] == high[j]) {
+					found = true;
+					if(high[j] == 1) {
+						//if both 1's then 
+						mid[i] = 1;
+						mid[j] = 0;
+					} else {
+						//both 0's
+						for (int k = i - 1; k > j; k--) {
+							mid[k] = low[k];
+						}
+						mid[j] = 1;
+					}
+					for (int k = j - 1; k >= 0; k--) {
+						if (low[k] == high[k]) {
+							if (low[k] == 1) {
+								mid[k] = 0;
+							} else {
+								mid[k] = 1;
+							}
+						} else {
+							mid[k] = 1;
+						}
+					}
+					break;
+				}
+			}
+			if (!found) {
+				mid[i] = 1;
+			}
 			break;
-		} else {
-			_c[i] = _a[i];
-		}	
+		}
+		mid[i] = low[i];
 	}
-	if (in != -1) {
-		_c[in] = 1;
+	ll md = 0;
+	for (int i = 63; i >= 0; i--) {
+		md += ((1LL & mid[i]) << i);
 	}
-	int c = 0;
-	for (int i = 0; i < 32; i++) {
-		c += (1 << i) * _c[i];
-	}
-	// cout << _c << '\n';
-	return c;
-}
-
-ll sum(ll a, ll b, ll c) {
-	return (a ^ b) + (b ^ c) + (c ^ a);
+	// cout << low << '\n' << high << '\n';
+	// cout << mid << '\n';
+	return md;
 }
  
 void solve()
 {
 	ll l, r;
 	cin >> l >> r;
-	// cout << r - 1 << " " << r - 2 << " " << r - 3;
-	// 00 ^ 11 + 11 ^ 01 + 00 ^ 10 --> max this
-	// 11 + 01 + 10
-	// c = r - 2;
-	// ll a, b, c;
-	// cin >> a >> b >> c;
-	// print(a ^ b);
-	// print(b ^ c);
-	// print(c ^ a);
-	// a ^ b + b ^ c + c ^ a
-	// 2 ones at each bit i.e 
-	// so to get 2 ones at each bit
-	// we can have 2, ones and 1 zero
-	// or 1 one and 2 zeroes
-
-	// try to maximize each bit
-	// calc(l, r);
-	cout << l << ' ' << calc(l, r) << ' ' <<  r;
-
-	// so a = l, c = r
-	// b = 
-
+	ll mid = fun(l, r);
+	cout << l << ' ' << mid << ' ' << r;
 }
  
 int main()
