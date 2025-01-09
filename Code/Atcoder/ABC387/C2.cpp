@@ -1,10 +1,11 @@
+#include <sys/types.h>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
 #include<bits/stdc++.h>
 #endif
 using namespace std;
-typedef unsigned long long ll;
+typedef u_int64_t ll;
 #define mod 1000000007
 vector<bool> prime;
  
@@ -57,17 +58,18 @@ ll dig(char ch) {
 
 ll ways(string x) {
 	// cout << x << " ";
-	//x is num
+	//x is numN
 	// no. of ways to get 0000 -> X
 	int digits = x.length();
 	ll ans = 0;
 	//all numbers having lesser digits
-	for (int d = 2; d < digits; d++) {
+	for (int d = 1; d < digits; d++) {
 		ans += ways_digit(d, 1, 9);
 	}
-	// cout << ans << " ";
 	ans += ways_digit(digits, 1, dig(x[0]) - 1);
-	// cout << ans << " ";
+	if (digits == 1) {
+		ans++;
+	}
 	for (int i = 1; i < digits; i++) {
 		ll xo = dig(x[0]);
 		ll xi = dig(x[i]);
