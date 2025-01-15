@@ -35,66 +35,46 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 	return out;
 }
 
-ll sum;
-
-
-void update(vector<vector<bool>> &vis, string &path) {
-	int x = 0, y = 0;
-	for (char ch : path) {
-		vis[x][y] = false;
-		if (ch == 'D') {
-			x++;
-		} else {
-			y++;
-		}
+ll row_sum(vector<vector<ll>> &grid, int r) {
+	ll sum = 0;
+	for (int j = 0; j < grid[r].size(); j++) {
+		sum += grid[r][j];
 	}
-	vis[x][y] = false;
+	return sum;
 }
 
-bool update_row(vector<vector<int>> &grid, vector<vector<bool>> &vis, int r) {
-	for (int i = 0; i < grid[r].size(); i++) {
-		
+ll col_sum(vector<vector<ll>> &grid, int c) {
+	ll sum = 0;
+	for (int i = 0; i < grid.size(); i++) {
+		sum += grid[i][c];
 	}
-}
-
-bool update_col(vector<vector<int>> &grid, vector<vector<bool>> &vis, int c) {
-
+	return sum;
 }
  
 void solve()
 {
 	int n, m;
 	cin >> n >> m;
-	vector<vector<int>> grid(n, vector<int> (m, 0));
-	vector<vector<bool>> vis(n, vector<bool> (m, true));
 	string path;
-	cin >> path;	
+	cin >> path;
+	vector<vector<ll>> grid(n, vector<ll> (m));
 	for (auto &row : grid) {
 		cin >> row;
-		cout << row;
 	}
-	int x = 0, y = 0, k = 0;
-	update(vis, path);
-	vis[0][0] = true;
-	sum = 0;
-	if (path[0] == 'D') {
-		for (int j = 0; j < m; j++) {
-			sum += grid[0][j];
-		}
-	} else {
-		for (int j = 0; j < m; j++) {
-			sum += grid[j][0];
-		}
-	}
-	while(k < path.length()) {
-		if (path[k] == 'D') {
-			x++;
+	int i = 0, j = 0;
+	for (char &ch : path) {
+		if (ch == 'D') {
+			grid[i][j] = (-1LL) * row_sum(grid, i);
+			i++;
 		} else {
-			y++;
+			grid[i][j] = (-1LL) * col_sum(grid, j); 
+			j++;
 		}
-		k++;
-		update_row(grid, vis, x) || update_col(grid, vis, y);
-		vis[x][y] = true;
+	}
+	if (path.back() == 'D') {
+		grid[i][j] = (-1LL) * row_sum(grid, i); 
+	} else {
+		grid[i][j] = (-1LL) * col_sum(grid, j); 
 	}
 	for (auto &row : grid) {
 		cout << row;
