@@ -1,4 +1,3 @@
-#include <vector>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
@@ -35,50 +34,29 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 	std::cout << '\n';
 	return out;
 }
-
-int far_right(vector<array<ll, 2>> &os, ll cur) {
-	int low = 0, high  = os.size() - 1;
-	int ans = high;
-	while(low <= high) {
-		int mid = low + (high - low) / 2;
-		if (os[mid][0] < cur) {
-			high = mid - 1;
-			ans = mid; 
-		} else {
-			low = mid + 1;
-		}
-	}
-	return os[ans][1];
-}
  
 void solve()
 {
-	//first get to max far right XD
-	//then get the max left element
 	int n;
 	cin >> n;
-	vector<ll> arr(n), g_pre(n), f_suf(n); //greatest pre and the farthest suf
+	vector<int> arr(n), pre(n);
 	cin >> arr;
-	vector<array<ll, 2>> os; // ordered stack
-	os.push_back({arr[n - 1], n - 1});
-	f_suf[n - 1] = n - 1;
+	pre[0] = arr[0];
+	for (int i = 1; i < n; i++) {
+		pre[i] = max(pre[i - 1], arr[i]);
+	}
+	vector<int> ans(n);
+	int mn = arr[n - 1];
+	ans[n - 1] = pre[n - 1];
 	for (int i = n - 2; i >= 0; i--) {
-		if (os.back()[0] < arr[i]) {
-			f_suf[i] = far_right(os, arr[i]);
+		if (pre[i] > mn) {
+			ans[i] = ans[i + 1];
 		} else {
-			os.push_back({arr[i], i});
-			f_suf[i] = i;
+			ans[i] = pre[i];
 		}
+		mn = min(mn, arr[i]);
 	}
-	ll mx = -1;
-	for (int i = 0; i < n; i++) {
-		mx = max(mx, arr[i]);
-		g_pre[i] = mx;
-	}
-	for (int i = 0; i < n; i++) {
-		cout << g_pre[f_suf[i]] << " ";
-	}
-
+	cout << ans;
 }
  
 int main()
@@ -91,7 +69,6 @@ int main()
 	while (t--)
 	{
 		solve();
-		cout << "\n";
 	}
 	return 0;
 }
