@@ -47,3 +47,14 @@ Complete templates/Generic_Template/debug.cpp
 
 1. Instead of searching for substrings one can use
 	str.find(substr) != string::npos, making sure len(substr) <= str
+
+
+Please Solve More Problems on Multisource bfs and bit manipulations
+
+Solve D in past contests
+create a script to give a list of all d of past contest
+
+
+https://virtual-graph-paper.com/
+(Online graph paper)
+Can be used in contests
