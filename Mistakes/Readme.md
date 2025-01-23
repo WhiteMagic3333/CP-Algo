@@ -58,3 +58,12 @@ create a script to give a list of all d of past contest
 https://virtual-graph-paper.com/
 (Online graph paper)
 Can be used in contests
+
+
+a / b  in modulo is
+
+a * b^(-1)
+
+b^(-1) in Modulo M is b ^ (m - 2) using binanry expo
+
+a / b = a * pow(b, m - 2) using binary expo where m is modulo & prime

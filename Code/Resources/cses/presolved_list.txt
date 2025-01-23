@@ -1,0 +1,9 @@
+1. https://cses.fi/problemset/task/2169
+2. https://cses.fi/problemset/task/2181
+3. https://cses.fi/problemset/task/2220
+4. Graphs -> Flight Discount +
+5. Range -> Hotel queries +
+6. Tree Algorithms
+7. Maths -> Josephus, Bracket Sequence 2, Counting Grids+
+8. String -> Min Rotation +
+9. Rest all
