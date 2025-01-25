@@ -69,3 +69,5 @@ b^(-1) in Modulo M is b ^ (m - 2) using binanry expo
 a / b = a * pow(b, m - 2) using binary expo where m is modulo & prime
 
 Dont get stuck on one technique. Dont enforce DP or graph algo or something 
+
+Make a template for index using lower_bound
