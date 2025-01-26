@@ -55,6 +55,21 @@ void solve()
  
 int main()
 {
+	//CAP theorem, indexing, multithreading how to create and start thread
+	//Type of database -NoSQL, SQL and InMemory
+	//Apache-kafka, redis, messaging queue, RabbitMQ
+	//Websockets?
+	//Databases Partitioning and Sharading
+	//backend.sh and systemdesign.sh
+
+	//Error Handling? try catch exception throws
+
+
+	// Graph Theory
+	// 
+
+	
+	
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
  
