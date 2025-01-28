@@ -1,0 +1,56 @@
+Discussion with aswal
+System Design -> HLD
+
+
+SD = LLD + HLD
+
+LLD
+
+writing code to solve real world scenarios->Tic Tac Toe
+
+HLD
+Caching, L
+
+_____________________________________________________
+
+
+Duck Simulator
+
+
+
+parent Duck
+{
+	fly();
+	swim();
+	quack(fun() with def val);//changes
+}
+
+____________________________________
+children
+
+MallardDuck {
+	display()
+}
+
+RussianDuck {
+	display() {
+		//looks better
+	}
+}
+
+MuteDuck {
+	//cant quack remains silent
+	@override
+	quack() {
+	//stay silent 
+	}
+}
+
+JapaneseDuck {
+	//
+}
+
+ToyDuck {
+	//cant fly
+	//doesnt have a quack behviour
+}

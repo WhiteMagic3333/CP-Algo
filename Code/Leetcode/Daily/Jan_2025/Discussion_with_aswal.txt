@@ -1,0 +1,33 @@
+Interface 
+
+flybehaviour {
+	
+}
+
+//fly
+
+parent Duck
+{
+	swim();
+}
+
+MD {
+	
+}
+
+RD implements fly, quack{
+	fly()
+	quack()
+}
+
+JD {
+	
+}
+
+TD { //does not have quack property
+	
+}
+
+Code Resuability
+
+
