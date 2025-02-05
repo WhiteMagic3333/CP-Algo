@@ -1,5 +1,3 @@
-#include <algorithm>
-#include <iostream>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
@@ -36,60 +34,53 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 	std::cout << '\n';
 	return out;
 }
-
-// ll exhaust(ll time, vector<vector<array<ll, 2>>> &col) {
-// 	//max row = time
-// 	ll ans = 1e9;
-// 	for (int i = 1; i < col.size(); i++) {
-// 		//get how many rows will come at time t
-// 		// max row <= t
-// 		array<ll, 2> s = {time + 1, 0};
-// 		ll cur = lower_bound(col[i].begin(), col[i].end(), s) - col[i].begin();
-// 		// cout << cur << "_" << col[i].size() << " ";
-// 		ans = min(cur, ans);
-// 	}
-// 	return ans;
-// }
  
 void solve()
 {
 	int n, w;
 	cin >> n >> w;
-	vector<vector<array<ll, 2>>> col(w + 1);
-	vector<ll> exhaust(n + 1, 0);
-	for (int i = 0; i < n; i++) {
-		int x, y;
-		cin >> x >> y;
-		col[x].push_back({y, i + 1});
+	vector<vector<int>> arr(n, vector<int> (2));
+	vector<vector<array<int, 2>>> col(w + 1);
+	int idx = 0;
+	for (auto &row : arr) {
+		cin >> row;
+		col[row[0]].push_back({row[1], idx++});
 	}
 	int q;
 	cin >> q;
-	vector<array<int, 2>> queries(q);
+	vector<vector<int>> queries(q, vector<int> (2));
 	for (auto &query : queries) {
-		cin >> query[0] >> query[1];
+		cin >> query;
 	}
+	int mn_idx = n;
 	for (int i = 1; i <= w; i++) {
 		sort(col[i].begin(), col[i].end());
+		mn_idx = min(mn_idx, (int)col[i].size());
 	}
-	vector<int> row_count(n + 1, 0);
-	for (int i = 1; i <= w; i++) {
-		for (int j = 0; j < col[i].size(); j++) {
-			if (j = 0)
-			row_count[col[i][j][1]] = j + 1;
-			exhaust[j] = max(exhaust[j], col[i][j][0]);
+	vector<int> index(n, mn_idx + 1);
+	vector<ll> time(mn_idx + 1, 1e9);
+	for (int l = 1; l <= mn_idx; l++) {
+		ll mx_time = 0;
+		for (int i = 1; i <= w; i++) {
+			index[col[i][l - 1][1]] = l - 1;
+			mx_time = max(mx_time, 1LL * col[i][l - 1][0]);
 		}
-
+		time[l] = mx_time;
 	}
-	for (auto &query : queries) {
-		//get how many rows are exhausted at t
-		//find the row count of i
-		ll _row_count = row_count[query[1]];
-		if (_row_count > exhaust[query[1]]) {
+
+	for (auto &que : queries) {
+		que[1]--;
+		if ((index[que[1]] + 1) > mn_idx) {
 			cout << "Yes\n";
 		} else {
-			cout << "No\n";
+			if (time[index[que[1]] + 1] > que[0]) {
+				cout << "Yes\n";
+			} else {
+				cout << "No\n";
+			}
 		}
 	}
+
 }
  
 int main()
