@@ -57,12 +57,15 @@ void solve()
 		}
 	} else {
 		//n > 2
-		int j = arr[1], k = arr[2];
-		if (j == 1 && k == 1) {
-			cur = 2;
-		} else {
-			cur = 1;
+		int extra = n - k + 1;
+		cur = 2;
+		for (int i = 1; i <= extra; i++) {
+			if (arr[i] != 1) {
+				cur = 1;
+				break;
+			}
 		}
+		
 	}
 	cout << cur;
 }
