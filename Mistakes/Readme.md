@@ -71,3 +71,11 @@ a / b = a * pow(b, m - 2) using binary expo where m is modulo & prime
 Dont get stuck on one technique. Dont enforce DP or graph algo or something 
 
 Make a template for index using lower_bound
+
+While using map, on accessing elements not present will create indexes, and if you reiterate, there will be extra elements having frequency 0
+
+so better use
+
+if (m.count(x)) {
+	//you logic here
+}
