@@ -44,3 +44,14 @@ Chapter 1:
 
 1. Focus on building systems of habits rather than obsessing over goals
 2. Start small and trust in the power of incremental progress
+
+For problems having GCD/LCM, the concept of sieve loop
+(harmonic) can be used for nlogn
+
+for (int d = 1; d < n; d++) {
+	for (int j = d; j < n; j += d) {
+
+	}
+}
+
+remember this is Nlog(N)
