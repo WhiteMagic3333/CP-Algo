@@ -1,4 +1,4 @@
-#include <algorithm>
+#include <vector>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
@@ -6,8 +6,9 @@
 #endif
 using namespace std;
 typedef long long ll;
-#define mod 1000000007
 vector<bool> prime;
+ll mod = 998244353;
+
  
 void sieve(ll n)
 {
@@ -35,33 +36,37 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 	std::cout << '\n';
 	return out;
 }
+
+ll _dp(vector<ll> &dp, int i) {
+	if (i < 0) {
+		return 0LL;
+	}
+	return dp[i];
+}
  
 void solve()
 {
-	ll n;
+	int n;
 	cin >> n;
 	vector<ll> arr(n);
 	cin >> arr;
-	map<ll, ll> m;
-	for (auto cur : arr) {
-		m[cur]++;
-	}
-	ll mx = *max_element(arr.begin(), arr.end());
-	ll ans = mx + 1;
-	for (ll i = 0; i <= n; i++) {
-		ll c = mx - i;
-		ll len = 0;
-		if (c == 0) {
-			break;
+	vector<ll> dp(3, 0);
+	for (int i = 0; i < n; i++) {
+		dp[0] += arr[i] == 1;
+		dp[0] %= mod;
+
+		if (arr[i] == 2) {
+			ll old = dp[1];
+			dp[1] += _dp(dp, 0);
+			dp[1] %= mod;
+			dp[1] += old;
+			dp[1] %= mod;
 		}
-		for (ll g = c; g <= mx; g += c) {
-			if (m.count(g)) {
-				len += m[g];
-			}
-		}
-		ans = max(ans, c + len);
+
+		dp[2] += (arr[i] == 3) ? _dp(dp, 1) : 0;
+		dp[2] %= mod;
 	}
-	cout << ans;
+	cout << dp[2];
 }
  
 int main()

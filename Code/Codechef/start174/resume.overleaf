@@ -1,0 +1,303 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.3 (22/9/2018)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% v1.3 author:
+% Zachary Taylor
+%
+% v1.3 repository:
+% https://github.com/WhiteMagic3333?tab=repositories/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Add various styling and section options and allow for multiple pages smoothly.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.3:
+% 1. Removed MacFonts version as I have no desire to maintain it nor access to macOS
+% 2. Switched column ordering
+% 3. Changed font styles/colors for easier human readability
+% 4. Added, removed, and rearranged sections to reflect my own experience
+% 5. Hid last updated
+%
+% v1.2:
+% 1. Added publications in place of societies.
+% 2. Collapsed a portion of education.
+% 3. Fixed a bug with alignment of overflowing long last updated dates on the top right.
+%
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-reversed}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{siunitx}
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Shivam Bohra}{ %\urlstyle{same}\href{http://example.com}{example.com}| \href{http://example2.co}{example2.co}\\
+\href{mailto:zacharydtaylor1997@gmail.com}{shivambohracse@gmail.com} | \href{tel:7895247976}{7895247976}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.60\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{INTERNSHALA}
+\descript{| SDE }
+\location{Feb 2023 – Nov 2024 | Gurugram}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item \textbf{Engineered a suite of administrative tools} that \textbf{eliminated 95\% of routine requests} to the engineering team, \textbf{empowering operational efficiency} and enabling to focus on high-impact projects while \textbf{saving 48+ hours monthly}. 
+\item Optimized high-traffic pages by caching using Redis, handling \textbf{150K+} monthly users and reducing database costs by \textbf{70\%}.
+\item \textbf{Reduced Cumulative Layout Shift (CLS) by 88.73\%} on multiple pages, as evidenced by \textbf{\href{https://drive.google.com/file/d/1BWp9BUS2UO8vijEqI8_dEby6oemSp6Rj/view?pli=1}{before}}/\textbf{\href{https://drive.google.com/file/d/17LGR4Ddwr1WCz4N1byhFVFyJOT0eRawk/view}{after}} screenshots, enhancing user experience and page stability.
+\item Developed responsive and high-speed landing pages for campaigns to promote offers and attract \textbf{approximately 5,000 new users per campaign}.
+\item Spearheaded troubleshooting and resolving \textbf{300+ bugs} reported by users, enhancing overall system reliability.
+\item Led code reviews for \textbf{400+} pull requests, offering constructive feedback and helping to maintain high code quality standards.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://drive.google.com/file/d/1ZcLAYqYqOfb_k8yCTmWL_13iNmg_5stc/view}{CODECHEF}}
+\descript{| Teaching Assistant }
+\location{Dec 2020 – Oct 2021 | Remote}
+\begin{tightemize}
+\item Mentored 400+ students in Data Structures and Algorithms (DSA), enhancing students' algorithmic thinking skills.
+\item Produced \textbf{solution videos} for programming contests, achieving over \textbf{50k views} on the \textbf{organization’s official YouTube channel}.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{\href{https://github.com/raghavendrashekhawat2/Open-Polls}{OPEN POLLS}}
+\descript{| Group Project}
+\location{}
+\begin{tightemize}
+\item Architected a Flask-based platform for user registration, login, and poll participation.
+\item Secured user authentication with SMS verification via Twilio API, using a 4 digit OTP.
+\item Integrated features for poll owners to sort participants by 4 different
+criteria enhancing data organization and resulting in more efficient data analysis.
+\item Utilized Google Visualizations to display poll results with 3 different charts, making data interpretation \textbf{more accessible} and \textbf{user-friendly}.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://github.com/WhiteMagic3333/Car-Rental-Agency-Online}{CAR RENTAL WEBSITE}}
+\descript{| Personal Project}
+\location{}
+\begin{tightemize}
+\item Online platform for renting cars and listing vehicles for rent.
+\item Rental agency users can add and update car listings, which customers can browse and book available vehicles.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Achievements}
+Max Rating (Codeforces) - 1,598 (Specialist) \\
+Positioned \textbf{\href{https://www.codechef.com/rankings/START173D?itemsPerPage=100&order=asc&page=3&sortBy=rank}{263}} out of 39,903 participants (Codechef Starter 173D)\\
+Achieved rank \textbf{\href{https://codeforces.com/contest/2065/standings/participant/203385270#p203385270}{497}} out of 30,895 participants (Codeforces Round 1003) \\
+Attained rank \textbf{\href{https://codeforces.com/contest/1734/standings/participant/140738734}{661}} out of 27,291 participants (Leetcode Weekly 432) \\
+Ranked \textbf{\href{https://codeforces.com/contest/1734/standings/participant/140738734}{1,024}} out of 20,547 participants (Codeforces Round 822) \\
+Total Problems Solved across all platforms 1200+ 
+
+
+% \section{Research}
+% \runsubsection{Cornell Robot Learning Lab}
+% \descript{| Researcher}
+% \location{Jan 2014 – Jan 2015 | Ithaca, NY}
+% Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan robot trajectories in human environments.
+% \sectionsep
+
+% \runsubsection{Cornell Phonetics Lab}
+% \descript{| Head Undergraduate Researcher}
+% \location{Mar 2012 – May 2013 | Ithaca, NY}
+% Led the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research.
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COMMUNITY SERVICE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Community Service}
+
+% \begin{tabular}{rll}
+% 2013 -- 2018    & Tennessee     & St. Baldrick's Foundation\\
+% 2014 -- 2017	& Tennessee     & American Cancer Society's Hope Lodge\\
+% 2013 -- 2015    & Tennessee     & Habitat for Humanity\\
+% 2011 -- 2015    & Tennessee     & Special Olympics\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Societies}
+
+% \begin{tabular}{rll}
+% 2018 -- 2018    & National      & Association of Computing Machinery (ACM)\\
+% 2017 -- 2019	& National      & Scrum Alliance Certified ScrumMaster\\
+% 2015 -- 2019    & University    & Shackouls Honors College\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards}
+% \begin{tabular}{rll}
+% 2015        & 99\textsuperscript{th} percentile & National Merit Scholarship Finalist\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications}
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.33\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{Graphic Era University}
+\descript{Bachelor of Technology in Computer Science and Engineering}
+\location{Jul 2018 – Jun 2022 | Dehradun, UK}
+% College of Engineering \\
+\location{ CGPA: 8.76 / 10.00}
+\sectionsep
+
+\subsection{Guru Nanak Academy}
+\descript{Class 12 ISC Board}
+\location{Graduation: 2018 | Dehradun, UK}
+% College of Engineering \\
+\location{ Percentage: 88.5\%}
+\sectionsep
+
+\subsection{Guru Nanak Academy}
+\descript{Class 10 ICSE Board}
+\location{Graduation: 2016
+| Dehradun, UK}
+% College of Engineering \\
+\location{ Percentage: 90.2\%}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+C/C++ \textbullet{} Python \\
+PHP \textbullet{} Java \\
+JavaScript \\
+\sectionsep
+
+\subsection{Technology}
+Git/Github \textbullet{} Redis \textbullet{} MySQL \\
+MongoDB \textbullet{} Elastic Search \textbullet{} Linux\\
+Memcache \textbullet{} Flask
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Undergraduate}
+Data Structures and Algorithms \\
+OOPS \\
+ 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+LinkedIn://  \href{https://www.linkedin.com/in/shivam-bohra-9789741a9/}{\bf Shivam Bohra} \\
+Leetcode:// \href{https://leetcode.com/u/whitemagic7456/}{\bf whitemagic7456} \\
+Codeforces:// \href{https://codeforces.com/profile/whitemagic_3333}{\bf whitemagic-3333} \\
+Codechef:// \href{https://www.codechef.com/users/whitemagic}{\bf whitemagic} \\
+CSES:// \href{https://cses.fi/problemset/user/10086}{\bf WhiteMagic} (Login Required) \\
+Atcoder:// \href{https://atcoder.jp/users/WhiteMagic}{\bf WhiteMagic} \\
+Github:// \href{https://github.com/ShivamBohra93}{\bf ShivamBohra93} \\
+\sectionsep
+
+\end{minipage}
+\end{document}  \documentclass[]{article}

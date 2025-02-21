@@ -88,19 +88,22 @@ void solve()
 	vector<vector<ll>> seg;
 	pre(n, seg);
 	int sz = 0;
-	for (int i = 0; i < n; i++) {
-		update(seg, 0, sz, 1);
-	}
-	for (int i = 0; i < n; i++) {
-		if (arr[i] == 1) {
-			sz++;
-		} else if (arr[i] == 2) {
-			seg.update(1, sz, 1);
-		} else if (sz > 0) {
-			ans += seg.query()
-			ans += bit.prefixSum(sz - 1);
-		}
-	}
+	ll ans = 0;
+	// for (int i = 0; i < n; i++) {
+	// 	if (arr[i] == 1) {
+	// 		sz++;
+	// 	} else if (arr[i] == 2) {
+	// 		if (sz > 0) {
+	// 			update(seg, 0, sz - 1, 1);
+	// 		}
+	// 	} else if (sz > 0) {
+	// 		ans += query(seg, sz - 1);
+	// 	}
+	// }
+	// cout << ans;
+	update(seg, 0, 0, 1);
+	update(seg, 0, 1, 1);
+	cout << query(seg, 1);
 }
  
 int main()
