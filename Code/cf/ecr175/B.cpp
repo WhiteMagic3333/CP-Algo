@@ -1,4 +1,6 @@
-#ifndef ONLINE_JUDGE
+#g
+g
+gggifndef ONLINE_JUDGE
 #include "magic.h"
 #else
 #include<bits/stdc++.h>
