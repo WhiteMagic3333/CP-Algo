@@ -34,10 +34,40 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 	std::cout << '\n';
 	return out;
 }
+
+int blocks(string &str, vector<int> &arr, ll mid, int &n) {
+	char prev = 'R';
+	int bl = 0;
+	for (int i = 0; i < n; i++) {
+		if (arr[i] > mid) {
+			if (str[i] == 'B') {
+				bl += (prev == 'R');
+			}
+			prev = str[i];
+		}
+	}
+	return bl;
+}
  
 void solve()
 {
-	
+	int n, k;
+	cin >> n >> k;
+	string str;
+	cin >> str;
+	vector<int> arr(n);
+	cin >> arr;
+	ll low = 0, ans = 1e9, high = 1e9;
+	while (low <= high) {
+		ll mid = low + (high - low) / 2;
+		if (blocks(str, arr, mid, n) > k) {
+			low = mid + 1;
+		} else {
+			ans = min(ans, mid);
+			high = mid - 1;
+		}
+	}
+	cout << ans;
 }
  
 int main()
