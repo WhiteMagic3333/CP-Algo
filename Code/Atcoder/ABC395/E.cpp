@@ -1,10 +1,9 @@
-#include <queue>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
 #include<bits/stdc++.h>
 #endif
-#include <set>
+#include <queue>
 using namespace std;
 typedef long long ll;
 #define mod 1000000007
@@ -36,48 +35,51 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 	std::cout << '\n';
 	return out;
 }
+
+ll n, m, x;
+
+void rec(vector<vector<int>> &dir, vector<vector<int>> &rev, int i, vector<bool> &vis, vector<vector<ll>> &dp) {
+	if (dp[i][0] < 1e18 && dp[i][1] < 1e18) {
+		return;
+	}
+	vis[i] = true;
+	for (auto &u : dir[i]) {
+		if (!vis[u]) {
+			rec(dir, rev, u, vis, dp);
+			dp[i][0] = min(dp[i][0], 1LL + dp[u][0]);
+			dp[i][0] = min(dp[i][0], 1LL + x + dp[u][1]);
+			dp[i][1] = min(dp[i][1], 1LL + x + dp[u][0]);
+			dp[i][1] = min(dp[i][1], 1LL + x + x + dp[u][1]);
+		}
+	}
+	for (auto &u : rev[i]) {
+		if (!vis[u]) {
+			rec(dir, rev, u, vis, dp);
+			dp[i][1] = min(dp[i][1], 1LL + dp[u][1]);
+			dp[i][1] = min(dp[i][1], 1LL + x + dp[u][0]);
+			dp[i][0] = min(dp[i][0], 1LL + x + dp[u][1]);
+			dp[i][0] = min(dp[i][0], 1LL + x + x + dp[u][0]);
+		}
+	}
+	vis[i] = false;
+}
+
  
 void solve()
 {
-	ll n, m, x;
 	cin >> n >> m >> x;
-	vector<vector<int>> adj(n + 1);
+	vector<vector<int>> dir(n + 1), rev(n + 1);
 	for (int i = 0; i < m; i++) {
 		int u, v;
 		cin >> u >> v;
-		adj[u].push_back(v);
-		adj[v].push_back(-u); //opposite dir
+		dir[u].push_back(v);
+		rev[v].push_back(u); //opposite dir
 	}
 	vector<bool> vis(n + 1, false);
-	vector<ll> t_moves(n + 1, 1e18);
-	set<array<ll, 3>> s; // total moves, cur node, cur_sign
-	s.insert({0, 1, 1});
-	while (s.size()) {
-		ll moves = (*s.begin())[0];
-		ll vertex = (*s.begin())[1];
-		ll sign = (*s.begin())[2];
-		s.erase(s.begin());
-		vis[vertex] = true;
-		for (auto &u : adj[vertex]) {
-			if (!vis[abs(u)]) {
-				ll _sign = u < 0 ? -1 : 1;
-				u = abs(u);
-				ll _moves = (sign != _sign) ? x : 0;
-				_moves += moves + 1;
-				if (t_moves[u] > _moves) {
-					auto it = s.lower_bound({t_moves[u], u, -1});
-					if (it != s.end() && (*it)[1] == u) {
-						s.erase(it);
-					}
-					s.insert({_moves, u, _sign});
-					t_moves[u] = _moves;
-				}
-			}
-		}
-	}
-	s.insert({0, 1, x});
-	cout << t_moves[n];
-
+	vector<vector<ll>> dp(n + 1, vector<ll> (2, 1e18));
+	dp[n][0] = dp[n][1] = 0;
+	rec(dir, rev, 1, vis, dp);
+	cout << min(dp[1][0], dp[1][1]);
 }
  
 int main()
