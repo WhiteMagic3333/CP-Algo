@@ -8,7 +8,7 @@ public:
         long long ans = 0;
         int i = 0, j = 0, v = 0, c = 0, n = word.length();
         unordered_map<char, int> m;
-        vector<int> suf_vowels(n + 2, 0);
+        vector<int> suf_vowels(n + 1, 0);
         for (int i = n - 1; i >= 0; i--) {
             if (is_vowel(word[i])) {
                 suf_vowels[i] = 1 + suf_vowels[i + 1];
