@@ -34,17 +34,57 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
     std::cout << '\n';
     return out;
 }
+
+// ll valid(ll a, ll b, ll c, ll d) {
+//     // ax^2 + bx + c = 0の解
+//     ll l = 0, r = 600000001;
+//     while (r - l > 1) {
+//         ll mid = (l + r) / 2;
+//         if (a * mid * mid + b * mid + c <= 0)
+//             l = mid;
+//         else
+//             r = mid;
+//     }
+//     if (a * l * l + b * l + c == 0){
+//         cout << l << " " << l + d;
+//         return true;
+//     }
+//     return false;
+// }
+
+ll sol(ll a, ll b, ll c) {
+    ll low = 1, high = 1e9;
+    while (low <= high) {
+        ll mid = low + (high - low) / 2;
+        ll cur = a * mid * mid + b * mid + c;
+        if (cur > 0) {
+            high = mid - 1;
+        } else if (cur < 0) {
+            low = mid + 1;
+        } else {
+            return mid;
+        }
+    }
+    return -1;
+}
+
  
 void solve()
 {
-    long long diff = 397;
-    ll n = 1e9;
-    for (ll i = n - 2; i < n; i++) {
-        ll j = i - 1;
-        diff = max(diff, (i * i * i) - (j * j * j));
+    ll n;
+    cin >> n;
+    for (ll d = 1; d * d * d <= n; ++d) {
+        // (k+d)^3 - k^3 = d^3 + 3*d^2k + 3*d*k^2 = n
+        if (n % d != 0)
+            continue;
+        ll m = n / d; // =3*k^2 + 3*dk + d^2
+        ll k = sol(3, 3 * d, d * d - m);
+        if (k > 0) {
+            cout << k + d << " " << k << endl;
+            return;
+        }
     }
-    long long cur = 1e18;
-    cout << (diff >= cur);
+    cout << -1 << '\n';
 }
  
 int main()
