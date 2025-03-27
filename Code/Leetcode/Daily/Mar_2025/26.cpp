@@ -9,7 +9,7 @@ public:
     }
 
     int minOperations(vector<vector<int>>& grid, int x) {
-        //mod should be same for each element
+        //mod should be same  
         int mod = grid[0][0] % x;
         vector<int> arr;
         for (auto &row : grid) {
