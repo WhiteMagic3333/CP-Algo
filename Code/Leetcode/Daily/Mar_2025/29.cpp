@@ -34,40 +34,10 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
     std::cout << '\n';
     return out;
 }
-
-void get_answer(ll &n, ll &m, ll &row, ll &ans) {
-   ll gaps = m - row;
-   ll intervals = m - row + 1;
-   ll interval_size = row / intervals;
-   if (row % intervals) {
-       interval_size++;
-   }
-   ans = min(ans, interval_size);
-}
-
-long long binpow(long long a, long long b, long long m) {
-    a %= m;
-    long long res = 1;
-    while (b > 0) {
-        if (b & 1)
-            res = res * a % m;
-        a = a * a % m;
-        b >>= 1;
-    }
-    return res;
-}
  
 void solve()
 {
-    ll n, m, k;
-    cin >> n >> m >> k;
-    ll ans = m;
-    ll per_row = k / n;
-    if (k % n) {
-        per_row++;
-    }
-    get_answer(n, m, per_row, ans);
-    cout << ans;
+    
 }
  
 int main()

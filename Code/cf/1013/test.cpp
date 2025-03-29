@@ -5,7 +5,6 @@
 #endif
 using namespace std;
 typedef long long ll;
-#define mod 1000000007
 vector<bool> prime;
  
 void sieve(ll n)
@@ -34,39 +33,23 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
     std::cout << '\n';
     return out;
 }
-
-void get_answer(ll &n, ll &m, ll &row, ll &ans) {
-   ll gaps = m - row;
-   ll intervals = m - row + 1;
-   ll interval_size = row / intervals;
-   if (row % intervals) {
-       interval_size++;
-   }
-   ans = min(ans, interval_size);
-}
-
-long long binpow(long long a, long long b, long long m) {
-    a %= m;
-    long long res = 1;
-    while (b > 0) {
-        if (b & 1)
-            res = res * a % m;
-        a = a * a % m;
-        b >>= 1;
-    }
-    return res;
-}
  
 void solve()
 {
-    ll n, m, k;
-    cin >> n >> m >> k;
-    ll ans = m;
-    ll per_row = k / n;
-    if (k % n) {
-        per_row++;
+    ll mod = 1e9 + 7;
+    // ll cur = 696552877;
+    // cur *= 7;
+    // cur %= (mod);
+    // cout << cur;
+    ll ans = 1, mx;
+    for (int i = 0; i < 6; i++) {
+        ans *= 11;
+        ans %= mod;
     }
-    get_answer(n, m, per_row, ans);
+    for (int i = 0; i < 8; i++) {
+        ans *= 7;
+        ans %= mod;
+    }
     cout << ans;
 }
  
@@ -75,12 +58,6 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
  
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
-        cout << "\n";
-    }
+    solve();
     return 0;
 }
