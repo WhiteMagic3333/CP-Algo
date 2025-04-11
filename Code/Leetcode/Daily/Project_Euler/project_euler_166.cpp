@@ -34,36 +34,37 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 void solve()
 {
     int ans = 0;
-    for (int a = 0; a < 10; a++) {
-        for (int b = 0; b < 10; b++) {
-            for (int c = 0; c < 10; c++) {
-                for (int d = 0; d < 10; d++) {
+    int dig = 9;
+    for (int a = 0; a <= dig; a++) {
+        for (int b = 0; b <= dig; b++) {
+            for (int c = 0; c <= dig; c++) {
+                for (int d = 0; d <= dig; d++) {
                     int s = a + b + c + d;
-                    for (int e = 0; e < 10; e++) {
-                        for (int f = 0; f < 10; f++) {
-                            for (int g = 0; g < 10; g++) {
+                    for (int e = 0; e <= dig; e++) {
+                        for (int f = 0; f <= dig; f++) {
+                            for (int g = 0; g <= dig; g++) {
                                 int h = s - e - f - g;
-                                if (h < 0 || h > 9) {
+                                if (h < 0 || h > dig) {
                                     continue;
                                 }
-                                for (int i = 0; i < 10; i++) {
+                                for (int i = 0; i <= dig; i++) {
                                     int m = s - a - i - e;
-                                    if (m < 0 || m > 9) {
+                                    if (m < 0 || m > dig) {
                                         continue;
                                     }
                                     int j = s - (m + g + d);
-                                    if (j < 0 || j > 9) {
+                                    if (j < 0 || j > dig) {
                                         continue;
                                     }
                                     int n = s - b - f - j;
-                                    if (n < 0 || n > 9) {
+                                    if (n < 0 || n > dig) {
                                         continue;
                                     }
-                                    for (int k = 0; k < 10; k++) {
+                                    for (int k = 0; k <= dig; k++) {
                                         int l = s - i - j - k;
                                         int o = s - c - g - k;
                                         int p = s - d - h - l;
-                                        if ((l < 0 || l > 9) || (o < 0 || o > 9) || (p < 0 || p > 9)) {
+                                        if ((l < 0 || l > dig) || (o < 0 || o > dig) || (p < 0 || p > dig)) {
                                             continue;
                                         }
                                         int d1 = a + f + k + p;
