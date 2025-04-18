@@ -1,0 +1,98 @@
+Aim for Shivam
+
+1. Learn Python
+2. Decide on Django and Fast API
+3. Learn Django/FastApi
+4. Learn Concepts and build mini projects from topics in roadmap.sh
+5. Build a project using those topics
+
+______ ______ ______ _____ _____
+
+Multithreading, Multiprocessing
+Circular Referencing 
+
+1. Simple and less to write which means less bugs created.
+
+Why python/ over others.
+Data types
+and Inteview level questions.
+
+____ ____ ____ ____ ____ ____
+
+React topics
+1. this keyword in js
+2. Reconcilization in react
+3. Bind apply call method
+4. Foreach map filter and Reduce
+5. Resuable Components
+6. Usestate useref useeffect usememo usecallback react.memo 
+7. Redux + context API
+8. Codespllitting lazy loading
+
+____ ____ ____ ____ ____ ____
+Backend
+
+1. Rest API
+2. CRUD
+3. Rate Limiter, token bucket sliding window counter
+4. WebSockets- TCP/UDP
+5. Auth - JWT and OAuth
+6. SQL Injections prevention using validations on schema
+7. Messaging Queue -> Kafka RabbitMQ
+8. Caching-> Redis Memcache 
+
+_________________________________
+SQL
+
+SQL vs NO sql
+
+Mysql Vs MongoDB
+
+ACID->Automacity Consistency Isolation Durability
+
+Ideal for Payment Situation
+
+Read About Different Scenario's for DB Selections for eg sql for paytments etc.
+
+FIFO
+Edit/Delete/Write->Master(Redundancy)
+Read->Slave
+
+Notification System(Ratelimiter From HLD Book) from 3rd party
+
+Payments (Case Studies)
+https://newsletter.systemdesign.one/p/actor-model
+https://newsletter.systemdesign.one/p/idempotent-api
+
+From roadmap.sh
+
+serverside client side CDN
+bcrypt
+CORS/SSL
+Transactions
+CAP THeorem
+Shrading
+Database Replication
+Database Indexing
+
+Elastic Search
+
+RabbitMQ
+Kafka
+
+_______________________________
+IMP Concepts
+DC ka square
+RS ki bottle
+H&M brand
+
+Data centre
+Database sharding
+Caching
+CDN
+
+Redundancy/Replication
+Stateless architecture
+
+Horizontal Scaling
+Messaging queue
