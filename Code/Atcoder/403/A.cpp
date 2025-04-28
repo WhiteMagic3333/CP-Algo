@@ -37,7 +37,15 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
  
 void solve()
 {
-    
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    cin >> arr;
+    ll sum = 0;
+    for (int i = 0; i < n; i += 2) {
+        sum += arr[i];
+    }
+    cout << sum;
 }
  
 int main()
