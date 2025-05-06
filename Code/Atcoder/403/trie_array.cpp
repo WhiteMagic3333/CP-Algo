@@ -41,7 +41,7 @@ void solve()
     // nxt[nodes][26], all -1
     // only tells that at depth i, the char is present or not
     // for other info such as is_word etc we need more arrays
-    int depth = 1e5; //max word size
+    int nodes = 1e5; //max word size
     int trie[node][26];
 }
  
