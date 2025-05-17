@@ -1,5 +1,5 @@
 class Solution {
-public:
+public: //re
     void sortColors(vector<int>& arr) {
         //0's on left and 2's on right
         int l = 0, m = 0, r = arr.size() - 1;
