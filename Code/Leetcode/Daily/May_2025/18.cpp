@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//
 public:
     int n,m,dp[1000][5][(1<<10)],mod=1e9+7;
     
