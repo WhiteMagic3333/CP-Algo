@@ -1,0 +1,6 @@
+
+{
+  "title":"Problem Set 9",
+  "content":"Most of the problems are assigned from the required textbook Bona, Miklos. A Walk Through Combinatorics: An Introduction to Enumeration and Graph Theory. World Scientific Publishing Company, 2011. ISBN: 9789814335232. [Preview with Google Books]\nA problem marked by * is difficult; it is not necessary to solve such a problem to do well in the course.\nProblem Set 9 Due in Session 25 Practice Problems Session 22: Chapter 10: Exercises 1, 2, 7. 7 is quite difficult. Session 23: Chapter 10: Exercises 6, 7, 12, 20 Session 24: None Problems Assigned in the Textbook Chapter 10: Exercises 22, 27, 36, 39, 43. In exercise 27, it is not clear what \u0026ldquo;cross each other\u0026rdquo; means. What you should prove is that all longest paths have a vertex in common. (This is rather tricky.) For this problem you may assume the result of 26. (As a bonus, you could include a solution to 26). For 43, give a simple combinatorial argument based on Theorem 10.7. Additional Problems (A13*) Give an example of a simple graph with exactly three automorphisms. Note that the graph _K_3 (a triangle) has six automorphisms. Bonus Problems None "}
+
+

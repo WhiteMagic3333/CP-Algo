@@ -1,0 +1,23 @@
+{
+  "course_title":"Combinatorial Analysis",
+  "course_description":"This course analyzes combinatorial problems and methods for their solution. Topics include: enumeration, generating functions, recurrence relations, construction of bijections, introduction to graph theory, network algorithms, and extremal combinatorics.\n",
+  "course_description_html":"This course analyzes combinatorial problems and methods for their solution. Topics include: enumeration, generating functions, recurrence relations, construction of bijections, introduction to graph theory, network algorithms, and extremal combinatorics.",
+  "site_uid":"33e1fffe-7b92-4b86-bd57-1a86ba40974b",
+  "legacy_uid":"2986e8ea-9382-68f8-20a0-ae7393776f0f","instructors": [{
+    "first_name":"Richard",
+    "last_name":"Stanley",
+    "middle_initial":"",
+    "salutation":"Prof.",
+    "title":"Prof. Richard Stanley"}],"department_numbers":["18"],
+  "learning_resource_types":["Exams with Solutions","Problem Sets"],
+  "topics":[["Mathematics","Applied Mathematics"],["Mathematics","Discrete Mathematics"]],
+  "mit_learn_topics":null,
+  "primary_course_number":"18.314",
+  "extra_course_numbers":"",
+  "term":"Fall",
+  "year":"2014",
+  "level":["Undergraduate"],
+  "hide_download":null,
+  "image_src":"./static_resources/34e26b8c8cb14f7c42b18b1384814d01_18-314f14.jpg",
+  "course_image_metadata":{"content_type":"resource","description":"A graph of embedded planars without isthmuses. In this case the 9-sided face is on the outside and the 7-sided face is completely inside. Image by Richard Stanley.","draft":false,"file":"/courses/18-314-combinatorial-analysis-fall-2014/34e26b8c8cb14f7c42b18b1384814d01_18-314f14.jpg","file_size":36895,"file_type":"image/jpeg","image_metadata":{"caption":"An embedded planar graph without isthmuses. In this case the 9-sided face is on the outside and the 7–sided face is completely inside. (Image by Richard Stanley.)","credit":"Image by Richard Stanley.","image-alt":"A spiral graph of embedded polygons from 3-sided to 9-sided."},"iscjklanguage":false,"learning_resource_types":[],"license":"https://creativecommons.org/licenses/by-nc-sa/4.0/","ocw_type":"OCWImage","resourcetype":"Image","title":"18-314f14.jpg","uid":"34e26b8c-8cb1-4f7c-42b1-8b1384814d01"}}
+

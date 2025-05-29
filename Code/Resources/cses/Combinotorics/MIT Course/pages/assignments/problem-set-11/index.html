@@ -1,0 +1,2450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMQZ25T');</script>
+    
+  
+  
+
+
+
+
+    
+    <link href="../../../static_shared/css/course_offline.805ba.css" rel="stylesheet">
+    
+
+    
+    <link href="../../../static_shared/css/common.805ba.css" rel="stylesheet">
+    
+
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  
+
+  <meta name="description" content="This page provides a problem set on combinatorial analysis.">
+  <meta name="keywords" content="opencourseware,MIT OCW,courseware,MIT opencourseware,Free Courses,class notes,class syllabus,class materials,tutorials,online courses,MIT courses">
+  
+  <meta property="og:site_name" content="MIT OpenCourseWare">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ocw.mit.edu/https://ocw.mit.edu/pages/assignments/problem-set-11/" />
+  <meta property="og:title" content="Problem Set 11 | Combinatorial Analysis | Mathematics | MIT OpenCourseWare" />
+  <meta property="og:description" content="This page provides a problem set on combinatorial analysis." />
+
+  
+
+<meta property="og:image" content="https://ocw.mit.edu/courses/18-314-combinatorial-analysis-fall-2014/34e26b8c8cb14f7c42b18b1384814d01_18-314f14.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mitocw" />
+<meta name="twitter:image:src" content="https://ocw.mit.edu/courses/18-314-combinatorial-analysis-fall-2014/34e26b8c8cb14f7c42b18b1384814d01_18-314f14.jpg" />
+  
+  <link rel="canonical" href="https://ocw.mit.edu/https://ocw.mit.edu/pages/assignments/problem-set-11/" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type" : "WebPage",
+        "name": "MIT OpenCourseWare",
+        "description": "This page provides a problem set on combinatorial analysis.",
+        "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/", 
+        "publisher": {
+          "@type": "CollegeOrUniversity",
+          "name": "MIT OpenCourseWare"
+        }
+      }
+  </script>
+
+  <title>Problem Set 11 | Combinatorial Analysis | Mathematics | MIT OpenCourseWare</title>
+  <style>
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(../../../static_shared/fonts/MaterialIcons-Regular.subset.504c7f0c308e930e9255.woff2) format('woff2'),
+      url(../../../static_shared/fonts/MaterialIcons-Regular.subset.1f8f08f2bf0d6e078379.woff) format('woff'),
+      url(../../../static_shared/fonts/MaterialIcons-Regular.subset.aa271372671db14b34f2.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local("MaterialIcons-Round"),
+    url(../../../static_shared/fonts/MaterialIconsRound-Regular.subset.7154eae1d0e60e0dabe4.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Cardo Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Cardo'),
+      local('Cardo-Bold'),
+      url(../../../static_shared/fonts/Cardo-Bold.d7bf1aa6f322a64b2fc3.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Cardo Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Cardo'),
+      local('Cardo-Italic'),
+      url(../../../static_shared/fonts/Cardo-Italic.0935d2ebbc05be3559b1.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Helvetica Light';
+    font-style: normal`;
+    font-weight: 400;
+    src: local('Helvetica Light'),
+      local('Helvetica-Light'),
+      url(../../../static_shared/fonts/Helvetica-Light.70359849afb40079a1c8.ttf) format('truetype');
+  }
+  .external-link.nav-link::after {
+    background-image: url('../../../static_shared/images/external_link.58bbdd86c00a2c146c36.svg'); 
+  }
+  </style>
+</head>
+
+<body class="course-home-page">
+  
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMQZ25T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  
+  <div class="overflow-auto">
+    <span class="course-header">
+    <div
+  id="mobile-course-nav"
+  class="navbar-offcanvas offcanvas-toggle offcanvas-toggle-close medium-and-below-only drawer">
+  <h3 class="my-4 d-flex align-items-center justify-content-between">
+    Browse Course Material
+    <button
+      class="btn"
+      type="button"
+      aria-label="Close Course Menu"
+      onclick="$('#mobile-course-nav-toggle').click();"
+      id="close-mobile-course-menu-button"
+      >
+      <img
+        src="../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </h3>
+  
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a144081c-57c2-fd00-cb13-4a1ef9c05df2"
+           href="../../../pages/syllabus/index.html" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a144081c-57c2-fd00-cb13-4a1ef9c05df2"
+    aria-labelledby="nav-button_mobile_a144081c-57c2-fd00-cb13-4a1ef9c05df2"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="29729bc5-9af5-51b1-9ba7-44c6c34a9cf5"
+           href="../../../pages/calendar/index.html" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_29729bc5-9af5-51b1-9ba7-44c6c34a9cf5"
+    aria-labelledby="nav-button_mobile_29729bc5-9af5-51b1-9ba7-44c6c34a9cf5"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="35d3b2c8-bd32-f77a-8ee2-0eb1252d9d33"
+           href="../../../pages/readings/index.html" >
+          Readings
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_35d3b2c8-bd32-f77a-8ee2-0eb1252d9d33"
+    aria-labelledby="nav-button_mobile_35d3b2c8-bd32-f77a-8ee2-0eb1252d9d33"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="88f36882-0870-1a5b-07ed-2e929d68ddce"
+           href="../../../pages/assignments/index.html" >
+          Assignments
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_88f36882-0870-1a5b-07ed-2e929d68ddce"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_88f36882-0870-1a5b-07ed-2e929d68ddce"
+      data-uuid="88f36882-0870-1a5b-07ed-2e929d68ddce"
+      aria-controls="nav-container_mobile_88f36882-0870-1a5b-07ed-2e929d68ddce"
+      aria-expanded="false"
+      aria-label="Subsections for Assignments"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_88f36882-0870-1a5b-07ed-2e929d68ddce"
+    aria-labelledby="nav-button_mobile_88f36882-0870-1a5b-07ed-2e929d68ddce"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6ba0cf8b-6586-6d5a-eef4-89f2b68870a1"
+           href="../../../pages/assignments/problem-set-1/index.html" >
+          Problem Set 1
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_6ba0cf8b-6586-6d5a-eef4-89f2b68870a1"
+    aria-labelledby="nav-button_mobile_6ba0cf8b-6586-6d5a-eef4-89f2b68870a1"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="bed7a78a-959d-8750-bfb4-e612fe935cc3"
+           href="../../../pages/assignments/problem-set-2/index.html" >
+          Problem Set 2
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_bed7a78a-959d-8750-bfb4-e612fe935cc3"
+    aria-labelledby="nav-button_mobile_bed7a78a-959d-8750-bfb4-e612fe935cc3"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a8d591d8-47e6-c6f6-4035-033ffc974248"
+           href="../../../pages/assignments/problem-set-3/index.html" >
+          Problem Set 3
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_a8d591d8-47e6-c6f6-4035-033ffc974248"
+    aria-labelledby="nav-button_mobile_a8d591d8-47e6-c6f6-4035-033ffc974248"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d743ea48-ec60-6204-8250-ba8da4aedc3d"
+           href="../../../pages/assignments/problem-set-4/index.html" >
+          Problem Set 4
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_d743ea48-ec60-6204-8250-ba8da4aedc3d"
+    aria-labelledby="nav-button_mobile_d743ea48-ec60-6204-8250-ba8da4aedc3d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6459c98d-d328-f7b3-f8bb-0b1761de8e42"
+           href="../../../pages/assignments/problem-set-5/index.html" >
+          Problem Set 5
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_6459c98d-d328-f7b3-f8bb-0b1761de8e42"
+    aria-labelledby="nav-button_mobile_6459c98d-d328-f7b3-f8bb-0b1761de8e42"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8b6ade4c-4ff9-e21d-f8d8-b9edc0c51f51"
+           href="../../../pages/assignments/problem-set-6/index.html" >
+          Problem Set 6
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_8b6ade4c-4ff9-e21d-f8d8-b9edc0c51f51"
+    aria-labelledby="nav-button_mobile_8b6ade4c-4ff9-e21d-f8d8-b9edc0c51f51"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="cff149ed-cd85-f47e-d1ab-bc1193f10c61"
+           href="../../../pages/assignments/problem-set-7/index.html" >
+          Problem Set 7
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_cff149ed-cd85-f47e-d1ab-bc1193f10c61"
+    aria-labelledby="nav-button_mobile_cff149ed-cd85-f47e-d1ab-bc1193f10c61"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d79065de-b3ec-e190-b0f6-ecff98e8ba65"
+           href="../../../pages/assignments/problem-set-8/index.html" >
+          Problem Set 8
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_d79065de-b3ec-e190-b0f6-ecff98e8ba65"
+    aria-labelledby="nav-button_mobile_d79065de-b3ec-e190-b0f6-ecff98e8ba65"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="47ef9d22-fb24-23af-f12d-d1ca0790e514"
+           href="../../../pages/assignments/problem-set-9/index.html" >
+          Problem Set 9
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_47ef9d22-fb24-23af-f12d-d1ca0790e514"
+    aria-labelledby="nav-button_mobile_47ef9d22-fb24-23af-f12d-d1ca0790e514"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c5c6dfc0-f2c1-bd15-8348-48d1e70bb5be"
+           href="../../../pages/assignments/problem-set-10/index.html" >
+          Problem Set 10
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_c5c6dfc0-f2c1-bd15-8348-48d1e70bb5be"
+    aria-labelledby="nav-button_mobile_c5c6dfc0-f2c1-bd15-8348-48d1e70bb5be"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e24e2ff9-fc53-2152-ee87-2bd9cadd814a"
+           href="../../../pages/assignments/problem-set-11/index.html" >
+          Problem Set 11
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_e24e2ff9-fc53-2152-ee87-2bd9cadd814a"
+    aria-labelledby="nav-button_mobile_e24e2ff9-fc53-2152-ee87-2bd9cadd814a"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0819bd6c-381a-eaca-050c-e7889adfc1c5"
+           href="../../../pages/assignments/problem-set-12/index.html" >
+          Problem Set 12
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_0819bd6c-381a-eaca-050c-e7889adfc1c5"
+    aria-labelledby="nav-button_mobile_0819bd6c-381a-eaca-050c-e7889adfc1c5"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f0a576c6-f66a-f323-0751-561493e775d5"
+           href="../../../pages/exams/index.html" >
+          Exams
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_f0a576c6-f66a-f323-0751-561493e775d5"
+    aria-labelledby="nav-button_mobile_f0a576c6-f66a-f323-0751-561493e775d5"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+</div>
+
+    <div
+  id="course-info-drawer"
+  class="bg-faded pt-3 bg-light navbar-offcanvas navbar-offcanvas-right medium-and-below-only drawer"
+>
+  <div class="col-12">
+    <button
+      class="btn close-mobile-course-info"
+      type="button"
+      aria-label="Close Course Info"
+      onclick="$('#mobile-course-info-toggle').click();"
+      id="close-mobile-course-info-button"
+      >
+      <img
+        class=""
+        src="../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </div>
+    
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h5 class="panel-course-info-title ">
+            Instructor
+            </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://ocw.mit.edu/search/?q=Prof.&#43;Richard&#43;Stanley"  >Prof. Richard Stanley</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h5 class="panel-course-info-title ">
+                Departments
+              </h5>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://ocw.mit.edu/search/?d=Mathematics"  >Mathematics</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            As Taught In
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            Fall
+            
+              2014
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            Level
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="https://ocw.mit.edu/search/?l=Undergraduate"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+
+
+<div class=" mt-4">
+  <h5 class="panel-course-info-title ">
+    Topics
+  </h5>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_0"
+    aria-expanded="true"
+    aria-label="Mathematics subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Mathematics"  >Mathematics</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_mobile_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Applied&#43;Mathematics"  >Applied Mathematics</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_mobile_0_0"
+      aria-label="Specialties"
+    >
+      
+    </ul>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Discrete&#43;Mathematics"  >Discrete Mathematics</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_mobile_0_1"
+      aria-label="Specialties"
+    >
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+  
+
+
+
+<div class="">
+  <h5 class="course-detail-title panel-course-info-title mt-3">
+    Learning Resource Types
+  </h5>
+  <div>
+    <div class="row d-inline m-0">
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">grading</i>
+    <span>Exams with Solutions</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">assignment</i>
+    <span>Problem Sets</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+<hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="../../download/index.html">
+    <div class="text-center w-100">Browse Resources</div>
+  </a>
+</div>
+
+</div>
+
+    
+
+
+
+
+
+<div id="mobile-header" class="position-relative bg-black medium-and-below-only">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black d-flex">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="material-icons display-4 text-white align-bottom">menu</i>
+    </button>
+    <div class="mx-auto">
+      <a href="https://ocw.mit.edu/">
+        <img width="200" src="../../../static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare"/>
+      </a>
+    </div>
+    <div class="user-menu-container"></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto pl-2 pt-2">
+        <li class="nav-item"></li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home"  >Give Now</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://ocw.mit.edu/about"  >About OCW</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >Help &amp; Faqs</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://ocw.mit.edu/contact"  >Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<div id="desktop-header">
+  <div class="contents">
+    <div class="left">
+      <div class="ocw-logo">
+        <a href="https://ocw.mit.edu/">
+          <img src="../../../static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare" />
+        </a>
+      </div>
+    </div>
+    <div class="right">
+      
+      <a class="give-button text-white text-decoration-none font-weight-bold small-link d-flex align-items-center" aria-label="Donate to MIT OpenCourseWare" href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home">
+        <span class="m-0 pr-2">GIVE NOW</span>
+        <img src="../../../static_shared/images/heart_burgundy.e7c8635e8cc6538b89fa.svg" class="heart-burgundy" alt="" />
+      </a>
+      <a   class="text-white text-decoration-none font-weight-bold pl-5 pr-3 py-2"    href="https://ocw.mit.edu/about"  >about ocw</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >help &amp; faqs</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"    href="https://ocw.mit.edu/contact"  >contact us</a>
+      <div class="user-menu-container"></div>
+    </div>
+  </div>
+</div>
+
+<div id="user-list-modal-container"></div>
+<div id="create-user-list-modal-container"></div>
+    </span>
+    
+    
+
+<div id="course-banner" class="p-0">
+  <div class="max-content-width course-banner-content m-auto py-3">
+    <div class="row">
+    <div class="col-11">
+      
+      <span class="course-number-term-detail">18.314 | Fall 2014 | Undergraduate</span>
+      <br>
+      <br>
+      <h1>
+        <a
+          class="text-capitalize m-0 text-white"
+          href="../../../index.html"
+        >Combinatorial Analysis</a>
+      </h1>
+    </div>
+    <div class="col-1"><div class="bookmark-button-container" data-resourcereadableid="18.314&#43;fall_2014"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+    <div id="course-main-content">
+      <div class="row">
+        <div class="col-12 course-home-grid">
+          <div class="medium-and-below-only">
+            <div class="d-flex align-items-center mb-3">
+              <div class="col-6 px-0">
+                <div>
+  <button
+    id="mobile-course-nav-toggle"
+    class="mobile-course-nav-toggle-btn d-inline-flex align-items-center offcanvas-toggle"
+    data-toggle="offcanvas"
+    data-target="#mobile-course-nav"
+  >
+    <img src="../../../static_shared/images/expand.a062b1c47b121e3c7e03.svg" alt=""/>
+    <span class="pl-1">Menu</span>
+  </button>
+</div>
+
+              </div>
+              <div class="col-6 px-0">
+                
+
+
+  <button 
+    class="btn btn-link float-right mobile-course-info-toggle-btn toggle navbar-toggle offcanvas-toggle"
+    id="mobile-course-info-toggle"
+    data-toggle="offcanvas" 
+    data-target="#course-info-drawer">
+    More Info
+  </button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row course-cards">
+        <div class="col-2 course-home-grid large-and-above-only">  
+          <div class="card">
+  <div class="card-body pr-2">
+    
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a144081c-57c2-fd00-cb13-4a1ef9c05df2"
+           href="../../../pages/syllabus/index.html" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a144081c-57c2-fd00-cb13-4a1ef9c05df2"
+    aria-labelledby="nav-button_desktop_a144081c-57c2-fd00-cb13-4a1ef9c05df2"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="29729bc5-9af5-51b1-9ba7-44c6c34a9cf5"
+           href="../../../pages/calendar/index.html" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_29729bc5-9af5-51b1-9ba7-44c6c34a9cf5"
+    aria-labelledby="nav-button_desktop_29729bc5-9af5-51b1-9ba7-44c6c34a9cf5"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="35d3b2c8-bd32-f77a-8ee2-0eb1252d9d33"
+           href="../../../pages/readings/index.html" >
+          Readings
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_35d3b2c8-bd32-f77a-8ee2-0eb1252d9d33"
+    aria-labelledby="nav-button_desktop_35d3b2c8-bd32-f77a-8ee2-0eb1252d9d33"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="88f36882-0870-1a5b-07ed-2e929d68ddce"
+           href="../../../pages/assignments/index.html" >
+          Assignments
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_88f36882-0870-1a5b-07ed-2e929d68ddce"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_88f36882-0870-1a5b-07ed-2e929d68ddce"
+      data-uuid="88f36882-0870-1a5b-07ed-2e929d68ddce"
+      aria-controls="nav-container_desktop_88f36882-0870-1a5b-07ed-2e929d68ddce"
+      aria-expanded="false"
+      aria-label="Subsections for Assignments"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_88f36882-0870-1a5b-07ed-2e929d68ddce"
+    aria-labelledby="nav-button_desktop_88f36882-0870-1a5b-07ed-2e929d68ddce"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6ba0cf8b-6586-6d5a-eef4-89f2b68870a1"
+           href="../../../pages/assignments/problem-set-1/index.html" >
+          Problem Set 1
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_6ba0cf8b-6586-6d5a-eef4-89f2b68870a1"
+    aria-labelledby="nav-button_desktop_6ba0cf8b-6586-6d5a-eef4-89f2b68870a1"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="bed7a78a-959d-8750-bfb4-e612fe935cc3"
+           href="../../../pages/assignments/problem-set-2/index.html" >
+          Problem Set 2
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_bed7a78a-959d-8750-bfb4-e612fe935cc3"
+    aria-labelledby="nav-button_desktop_bed7a78a-959d-8750-bfb4-e612fe935cc3"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="a8d591d8-47e6-c6f6-4035-033ffc974248"
+           href="../../../pages/assignments/problem-set-3/index.html" >
+          Problem Set 3
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_a8d591d8-47e6-c6f6-4035-033ffc974248"
+    aria-labelledby="nav-button_desktop_a8d591d8-47e6-c6f6-4035-033ffc974248"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d743ea48-ec60-6204-8250-ba8da4aedc3d"
+           href="../../../pages/assignments/problem-set-4/index.html" >
+          Problem Set 4
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_d743ea48-ec60-6204-8250-ba8da4aedc3d"
+    aria-labelledby="nav-button_desktop_d743ea48-ec60-6204-8250-ba8da4aedc3d"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="6459c98d-d328-f7b3-f8bb-0b1761de8e42"
+           href="../../../pages/assignments/problem-set-5/index.html" >
+          Problem Set 5
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_6459c98d-d328-f7b3-f8bb-0b1761de8e42"
+    aria-labelledby="nav-button_desktop_6459c98d-d328-f7b3-f8bb-0b1761de8e42"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="8b6ade4c-4ff9-e21d-f8d8-b9edc0c51f51"
+           href="../../../pages/assignments/problem-set-6/index.html" >
+          Problem Set 6
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_8b6ade4c-4ff9-e21d-f8d8-b9edc0c51f51"
+    aria-labelledby="nav-button_desktop_8b6ade4c-4ff9-e21d-f8d8-b9edc0c51f51"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="cff149ed-cd85-f47e-d1ab-bc1193f10c61"
+           href="../../../pages/assignments/problem-set-7/index.html" >
+          Problem Set 7
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_cff149ed-cd85-f47e-d1ab-bc1193f10c61"
+    aria-labelledby="nav-button_desktop_cff149ed-cd85-f47e-d1ab-bc1193f10c61"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="d79065de-b3ec-e190-b0f6-ecff98e8ba65"
+           href="../../../pages/assignments/problem-set-8/index.html" >
+          Problem Set 8
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_d79065de-b3ec-e190-b0f6-ecff98e8ba65"
+    aria-labelledby="nav-button_desktop_d79065de-b3ec-e190-b0f6-ecff98e8ba65"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="47ef9d22-fb24-23af-f12d-d1ca0790e514"
+           href="../../../pages/assignments/problem-set-9/index.html" >
+          Problem Set 9
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_47ef9d22-fb24-23af-f12d-d1ca0790e514"
+    aria-labelledby="nav-button_desktop_47ef9d22-fb24-23af-f12d-d1ca0790e514"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="c5c6dfc0-f2c1-bd15-8348-48d1e70bb5be"
+           href="../../../pages/assignments/problem-set-10/index.html" >
+          Problem Set 10
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_c5c6dfc0-f2c1-bd15-8348-48d1e70bb5be"
+    aria-labelledby="nav-button_desktop_c5c6dfc0-f2c1-bd15-8348-48d1e70bb5be"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="e24e2ff9-fc53-2152-ee87-2bd9cadd814a"
+           href="../../../pages/assignments/problem-set-11/index.html" >
+          Problem Set 11
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_e24e2ff9-fc53-2152-ee87-2bd9cadd814a"
+    aria-labelledby="nav-button_desktop_e24e2ff9-fc53-2152-ee87-2bd9cadd814a"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="0819bd6c-381a-eaca-050c-e7889adfc1c5"
+           href="../../../pages/assignments/problem-set-12/index.html" >
+          Problem Set 12
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_0819bd6c-381a-eaca-050c-e7889adfc1c5"
+    aria-labelledby="nav-button_desktop_0819bd6c-381a-eaca-050c-e7889adfc1c5"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="f0a576c6-f66a-f323-0751-561493e775d5"
+           href="../../../pages/exams/index.html" >
+          Exams
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_f0a576c6-f66a-f323-0751-561493e775d5"
+    aria-labelledby="nav-button_desktop_f0a576c6-f66a-f323-0751-561493e775d5"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+
+        </div>
+        <div class="col-sm-12 col-lg-10 course-home-grid">
+          <div class="">
+            <div class="card">
+              <div class="d-flex justify-content-between">
+                <div class="p-0 col-lg-9" id="main-course-section">
+                  <div class="card-body">
+                    
+<div class="mb-2">
+  <header>
+  <div class="course-section-title-container">
+    <div id="course-title">
+      
+      <div class="course-content-parent-title">Assignments</div>
+      
+      <h2 class="pb-1 mb-1">Problem Set 11</h2>
+    </div>
+  </div>
+</header>
+
+  <article class="content pt-3 mt-1">
+    <main id="course-content-section"><p>Most of the problems are assigned from the required textbook Bona, Miklos. <em>A Walk Through Combinatorics: An Introduction to Enumeration and Graph Theory</em>. World Scientific Publishing Company, 2011. ISBN: 9789814335232. [Preview with [Google Books](<a href="http://books.google.com/books" target="_blank" rel="noopener">http://books.google.com/books</a>?
+id=TzJ2L9ZmlQUC&amp;pg=PAfrontcover)]</p>
+<p>A problem marked by * is difficult; it is not necessary to solve such a problem to do well in the course.</p>
+
+    <h3 id="problem-set-11">Problem Set 11</h3>
+
+<ul>
+<li>Due in Session 33</li>
+<li>Practice Problems
+<ul>
+<li>
+<p>Session 30:</p>
+<ul>
+<li>
+<p>Let <em>G</em> be a bipartite graph with bipartition (<em>X,Y</em>). Show that the following three conditions are equivalent.</p>
+<ul>
+<li><em>G</em> is connected, and each edge of <em>G</em> is contained in a perfect matching.</li>
+<li>For any <em>x</em> in <em>X</em> and <em>y</em> in <em>Y</em>, <em>G-x-y</em> has a perfect matching.</li>
+<li><em>X</em> = <em>Y</em>, and for every nonempty subset <em>T</em> of <em>X</em> except <em>X</em>, we have <em>N</em>(<em>T</em>) &gt; <em>T</em>.</li>
+</ul>
+</li>
+<li>
+<p>Let <em>M</em> be an <em>m</em>×<em>n</em> matrix of 0&rsquo;s and 1&rsquo;s. Let <em>a</em>(<em>M</em>) be the maximum number of 1&rsquo;s of <em>M</em> such that no two are in the same row or column. Let <em>b</em>(<em>M</em>) be the minimum number of rows and columns of <em>M</em> such that cover every 1 (i.e., every one is in at least one of the rows or columns). Show that <em>a</em>(<em>M</em>) = <em>b</em>(<em>M</em>). (<strong>Hint.</strong> Use the Konig-Egervary theorem.)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Session 31: None</p>
+</li>
+<li>
+<p>Session 32: Chapter 11: Exercises 6, 7</p>
+</li>
+</ul>
+</li>
+<li>Problems Assigned in the Textbook
+<ul>
+<li>Chapter 11: Exercise 30. <strong>Hint.</strong> Consider the operation ⊕ as used in the proof of Theorem 11.14 on page 260.</li>
+<li>Chapter 11: Exercises 23, 24</li>
+</ul>
+</li>
+<li>Additional Problems
+<ul>
+<li>(A17) Let <em>G</em> be a bipartite graph for which a maximum matching has <em>n</em> edges. What is the smallest possible size of a <em>maximal</em> matching? (You need to give an example of this size and prove that no smaller size is possible in any bipartite graph for which a maximum matching has <em>n</em> edges.)</li>
+<li>(A18)  Let <em>G</em> and <em>H</em> be finite graphs. Let <em>K</em> consist of the union of <em>G</em> and <em>H</em>, with an edge <em>e</em> of <em>G</em> identified with an edge <em>f</em> of <em>H</em>. (Thus if <em>G</em> has <em>q</em> edges and <em>H</em> has <em>r</em> edges, then <em>K</em> has <em>q+r-1</em> edges.) Express the chromatic polynomial of <em>K</em> in terms of those of <em>G</em> and <em>H</em>. Example:
+<img src="../../static_resources/be95e32dd696cf2953cb44b23dd1b5a1_pset11.jpg" alt="Three graphs, each made up of rectangles and triangles." />*   Bonus Problems</li>
+<li>(B4) Let <em>M</em> be an <em>n</em>×<em>n</em> matrix of nonnegative integers. What is the least positive integer <em>f</em>(<em>n</em>) with the following property? If every row and column of <em>M</em> sums to <em>f</em>(<em>n</em>), then there exists <em>n</em> entries of <em>M</em>, no two in the same row and column, and all greater than one. For instance <em>f</em>(2)=3 and <em>f</em>(3)=5. The matrix with rows [2,1,1], [2,1,1], [0,2,2] shows that <em>f</em>(3)&gt;4.</li>
+</ul>
+</li>
+</ul>
+</main>
+  </article>
+</div>
+
+
+                  </div>
+                </div>
+                
+                  <button 
+  type="button" 
+  class="btn course-info-button large-and-above-only"
+  id="desktop-course-drawer-button"
+  data-target="#desktop-course-drawer"
+  data-toggle="collapse"
+  aria-label="Course Info"
+  aria-controls="desktop-course-drawer"
+  aria-expanded="false"
+>
+  <img
+    class="expand-drawer-img drawer-icon-img"
+    src="../../../static_shared/images/left_arrow.3c482a1f6223bff3f0e6.svg"
+    alt=""
+  />
+  <img
+    class="collapse-drawer-img drawer-icon-img"
+    src="../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+    alt=""
+  />
+</button>
+
+<div class="collapse border-left p-0 large-and-above-only col-3" id="desktop-course-drawer">
+    
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h5 class="panel-course-info-title ">
+            Instructor
+            </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://ocw.mit.edu/search/?q=Prof.&#43;Richard&#43;Stanley"  >Prof. Richard Stanley</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h5 class="panel-course-info-title ">
+                Departments
+              </h5>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://ocw.mit.edu/search/?d=Mathematics"  >Mathematics</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            As Taught In
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            Fall
+            
+              2014
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            Level
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="https://ocw.mit.edu/search/?l=Undergraduate"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+  <div class="px-3">
+    
+
+
+
+
+
+<div class=" mt-4">
+  <h5 class="panel-course-info-title ">
+    Topics
+  </h5>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_0"
+    aria-expanded="true"
+    aria-label="Mathematics subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Mathematics"  >Mathematics</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_desktop_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Applied&#43;Mathematics"  >Applied Mathematics</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_desktop_0_0"
+      aria-label="Specialties"
+    >
+      
+    </ul>
+    
+  </li>
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Discrete&#43;Mathematics"  >Discrete Mathematics</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_desktop_0_1"
+      aria-label="Specialties"
+    >
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+    
+
+
+
+<div class="">
+  <h5 class="course-detail-title panel-course-info-title mt-3">
+    Learning Resource Types
+  </h5>
+  <div>
+    <div class="row d-inline m-0">
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">grading</i>
+    <span>Exams with Solutions</span>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">assignment</i>
+    <span>Problem Sets</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+<hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="../../../download/index.html">
+    <div class="text-center w-100">Browse Resources</div>
+  </a>
+</div>
+
+  </div>
+</div>
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<div class="footer">
+    <div class="footer-main-content mx-auto">
+    	<div class="col-12 px-0">
+        	<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-9 px-0">
+					<div class="d-md-flex align-items-center">
+						<a href="https://openlearning.mit.edu/" target="_blank">
+							<img width="117px" src="../../../static_shared/images/mit_ol.4165342f87abb1da46fd.svg" alt="MIT Open Learning" />
+						</a>
+						<div class="ml-md-3 mt-4 mt-md-0">
+							<div class="font-weight-bold">
+								Over 2,500 courses & materials
+							</div>
+							<div>
+								Freely sharing knowledge with learners and educators around the world. <a href='https://ocw.mit.edu/about'>Learn more</a>
+							</div>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-3 px-0 d-none d-md-block">
+					<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="../../../static_shared/images/Facebook.f4c9d732fd0e8bae1e01.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../static_shared/images/Instagram.b81e71401e1f281d343a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="../../../static_shared/images/x-formerly-twitter-black.98abb20137ea3cdc5cef.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../static_shared/images/Youtube.dec30cb84b5d4e836e64.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon" src="../../../static_shared/images/linkedin-black.8b4e88fcddcd8b3a89aa.png" alt="linkedin"/>
+		</a>
+	</div>
+</div>
+
+				</div>
+        	</div>
+    	</div>
+		
+		<div class="col-12 mt-3 mt-md-4 px-0">
+			<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-lg-flex">
+						<div class="pr-md-2 mt-2 mt-lg-0 d-none d-lg-block">
+							© 2001–2025 Massachusetts Institute of Technology
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://accessibility.mit.edu" target="_blank">Accessibility</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons License</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a class="hide-offline" href='https://ocw.mit.edu/pages/privacy-and-terms-of-use/'>Terms and Conditions</a>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0">
+					<div class="d-flex justify-content-md-end mt-4 mt-lg-0">
+						<div>
+						Proud member of: 
+						<a href="https://www.oeglobal.org/" target="_blank">
+							<img class="oeg-logo" src="../../../static_shared/images/oeg_logo.8a31f7b87f30df2d0169.png" alt="Open Education Global"/>
+						</a>
+						</div>
+					</div>
+				</div>
+        	</div>
+		</div>
+
+		<div class="col-12 mt-5 px-0 d-md-none">
+			<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="../../../static_shared/images/Facebook.f4c9d732fd0e8bae1e01.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../static_shared/images/Instagram.b81e71401e1f281d343a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="../../../static_shared/images/x-formerly-twitter-black.98abb20137ea3cdc5cef.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../static_shared/images/Youtube.dec30cb84b5d4e836e64.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon" src="../../../static_shared/images/linkedin-black.8b4e88fcddcd8b3a89aa.png" alt="linkedin"/>
+		</a>
+	</div>
+</div>
+
+		</div>
+
+		<div class="col-12 mt-4 px-0 d-lg-none">
+			© 2001–2025 Massachusetts Institute of Technology
+		</div>
+    
+
+
+    
+    <script src="../../../static_shared/js/course_offline.805ba.js"></script>
+    
+
+    
+	</div>
+</div>
+
+  </div>
+  <script>
+function hideLinksOffline(){
+  if (!window.navigator.onLine) {
+    const stripLinks = document.querySelectorAll(".strip-link-offline")
+    const hideOffline = document.querySelectorAll(".hide-offline")
+    const showOffline = document.querySelectorAll(".show-offline")
+    Array.prototype.forEach.call(stripLinks, function(link) {
+      link.outerHTML = link.innerHTML
+    })
+    Array.prototype.forEach.call(hideOffline, function(link) {
+      link.classList.add("d-none")
+    })
+    Array.prototype.forEach.call(showOffline, function(link) {
+      link.classList.remove("d-none")
+    })
+  }
+}
+hideLinksOffline()
+</script>
+
+  
+
+<div
+  class="modal"
+  id="external-link-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="external-link-modal-title"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-3">
+      <div class="modal-header d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <img
+            class="modal-header-icon-img mr-3 align-baseline"
+            src="../../../static_shared/images/external_link.58bbdd86c00a2c146c36.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <h1 class="modal-title" id="external-link-modal-title">
+            You are leaving MIT OpenCourseWare
+          </h1>
+        </div>
+        <button type="button" class="border-0 p-0 bg-transparent d-flex" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="material-icons modal-header-icon">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please be advised that external sites may have terms and conditions, 
+        including license rights, that differ from ours. MIT OCW is not responsible 
+        for any content on third party sites, nor does a link suggest an endorsement 
+        of those sites and/or their content.
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-link link-button"
+          data-dismiss="modal"
+          >
+            Stay Here
+        </button>
+        <a
+          role="button"
+          class="btn btn-primary btn-continue"
+          target="_blank"
+          href="#"
+        >
+          Continue
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    
+    
+    
+    
+    
+    
+    'use strict';
+    const COURSE_DRAWER_LOCAL_STORAGE_KEY = "desktopCourseDrawerState"
+    const COURSE_DRAWER_OPENED = "opened"
+    const COURSE_DRAWER_CLOSED = "closed"
+    
+    const DESKTOP_COURSE_DRAWER_ID = "desktop-course-drawer"
+    const COURSE_DRAWER_BTN_ID = "desktop-course-drawer-button"
+    const MAIN_COURSE_SECTION_ID = "main-course-section"
+
+    try{
+
+      
+
+      function initializeDesktopCourseDrawerState() {
+        const state = getLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY)
+        if (state === null) {
+          
+          setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_OPENED)
+          showOrHideDesktopCourseDrawer(COURSE_DRAWER_OPENED)
+        } else {
+          showOrHideDesktopCourseDrawer(state)
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const drawer = $(`#${DESKTOP_COURSE_DRAWER_ID}`)
+          const mainSection = $(`#${MAIN_COURSE_SECTION_ID}`)
+
+          drawer.on("shown.bs.collapse", (event) => {
+            if (event.target.id !== DESKTOP_COURSE_DRAWER_ID) {
+              return;
+            }
+            mainSection.addClass("col-lg-9")
+            mainSection.removeClass("col-12")
+            setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_OPENED)
+          })
+      
+          drawer.on("hidden.bs.collapse", (event) => {
+            if (event.target.id !== DESKTOP_COURSE_DRAWER_ID) {
+              return;
+            }
+            mainSection.addClass("col-12")
+            mainSection.removeClass("col-lg-9")
+            setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_CLOSED)
+          })
+        })
+      }
+
+      function showOrHideDesktopCourseDrawer(state) {
+        const drawer = document.getElementById(DESKTOP_COURSE_DRAWER_ID)
+        const button = document.getElementById(COURSE_DRAWER_BTN_ID)
+        const mainSection = document.getElementById(MAIN_COURSE_SECTION_ID)
+
+        if (state === COURSE_DRAWER_OPENED) {
+          drawer.classList.add("show")
+          button.setAttribute("aria-expanded", "true")
+        } else {
+          drawer.classList.remove("show")
+          button.setAttribute("aria-expanded", "false")
+          mainSection.classList.remove("col-lg-9")
+          mainSection.classList.add("col-12")
+        }
+      }
+
+      function setOrGetLocalStorageItem(action,key,value) {
+        try {
+          
+          if (typeof Storage !== "undefined") {
+            if (action === "set") {
+              localStorage.setItem(key, value)
+              return true
+            } else {
+              return localStorage.getItem(key)
+            }
+          }
+          console.error("This browser has no web storage support.")
+          return null
+        } catch (e) {
+          console.error("An exception occurred while storing/fetching data in/from localstorage: ", e)
+          return null
+        }
+      }
+
+      function setLocalStorageItem(key, value) {
+        return setOrGetLocalStorageItem("set", key, value)
+      }
+      
+      function getLocalStorageItem(key){
+        return setOrGetLocalStorageItem("get", key)
+      }
+
+      initializeDesktopCourseDrawerState();
+    }
+    catch(e){
+      console.error("Something went wrong in maintaining/toggling course drawer state", e)
+    }
+  </script>
+
+  
+
+<script>
+function expandNav(e,t){t.classList.add("show"),e.querySelector(".course-nav-section-toggle, video-tab-toggle-section").setAttribute("aria-expanded","true")}function courseNav(){document.querySelectorAll(".course-nav, .transcript-header").forEach(e=>{e.querySelectorAll(".nav-link").forEach(e=>{const t=e.getAttribute("href")?e.getAttribute("href"):"";if(t.replace(/\/$/,"")===window.location.pathname.replace(/\/$/,"")){e.classList.add("active");const s=e.dataset.uuid,t=e.closest(".course-nav-list-item"),n=t?.querySelector(".collapse"),o=Array.prototype.filter.call(document.querySelectorAll(".course-nav-section-toggle"),e=>e.dataset.uuid===s);t&&n&&o.length>0&&expandNav(t,n)}});const t=e.querySelector("a.nav-link.active");e.querySelectorAll(".course-nav-list-item").forEach(e=>{const n=e.querySelector(".collapse");n&&n.contains(t)&&expandNav(e,n)})})}courseNav()
+</script>
+
+  
+
+<script>
+(()=>{var e=()=>document.querySelectorAll("#course-content-section table"),t=()=>document.getElementById("course-content-section");function n(){const o=e(),n=t();if(!n)return;if(!window.ResizeObserver)return;const i=new ResizeObserver(()=>s());i.observe(n),o.forEach(e=>{const t=e.getElementsByTagName("th"),n=e.querySelectorAll("table tr");n.forEach(e=>{const n=e.querySelectorAll("td");n.forEach((e,s)=>{t.length>=s+1&&(n[s].dataset.title=t[s].innerText.trim().concat(": "))})})})}function s(){const s=e(),n=t();if(!n)return;s.forEach(e=>{const t=n.getBoundingClientRect(),o=+(e.dataset.minWidth??0);t.width>o&&e.classList.remove("mobile-table");const s=e.getBoundingClientRect();s.right>t.right&&(e.dataset.minWidth=`${s.width}`,e.classList.add("mobile-table"))})}n()})()
+</script>
+
+</body>
+
+</html>
