@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//
 public:
     int par[26];
     
