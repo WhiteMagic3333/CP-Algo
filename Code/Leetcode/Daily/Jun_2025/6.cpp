@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//
 public:
     char get_smallest_char(map<char, int> &freq) {
         for (auto [ch, f] : freq) {
