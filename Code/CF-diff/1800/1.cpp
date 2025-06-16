@@ -1,4 +1,4 @@
-//2093_F
+#include <numeric>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
@@ -6,6 +6,7 @@
 #endif
 using namespace std;
 typedef long long ll;
+#define all(a) a.begin(),a.end() //imp
 #define mod 1000000007
 vector<bool> prime;
  
@@ -38,7 +39,32 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
  
 void solve()
 {
-    
+    int n, m;
+    cin >> n >> m;
+    vector<string> a(n);
+    vector<vector<string>> b(m, vector<string> (n));
+    vector<int> present(n);
+    for (auto &str : a) {
+        cin >> str;
+    }
+    int mx = 0;
+    for (int i = 0; i < m; i++) {
+        int cnt = 0;
+        for (int j = 0; j < n; j++) {
+            cin >> b[i][j];
+            if (b[i][j] == a[j]) {
+                present[j] = 1;
+                cnt++;
+            }
+        }
+        mx = max(mx, cnt);
+    }
+    if (accumulate(all(present), 0) != n) {
+        cout << "-1";
+        return;
+    }
+    int ans = n + (n - mx) * 2;
+    cout << ans;
 }
  
 int main()
@@ -46,6 +72,12 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
  
-    solve();
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+        cout << "\n";
+    }
     return 0;
 }
