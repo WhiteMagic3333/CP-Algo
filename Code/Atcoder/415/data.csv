@@ -1,0 +1,36 @@
+Hotel Name,City,Price per Night,Rating,Number of Reviews,Room Type,Amenities,Is Available
+Elegant View,New York,474.94,3.6,487,Suite,"Parking, Breakfast included, Free WiFi",True
+Urban Retreat,Los Angeles,413.22,4.3,685,Standard,"Parking, Pool",True
+Urban Inn,Chicago,393.63,2.7,70,Standard,"Breakfast included, Free WiFi, Gym, Pool, Parking",True
+Urban Lodge,Miami,304.89,3.4,587,Deluxe,"Parking, Gym, Pet friendly, Free WiFi",True
+Golden Haven,Miami,334.59,3.0,888,Standard,"Free WiFi, Pet friendly",False
+Central Resort,Chicago,154.49,2.8,981,Economy,"Pool, Gym, Free WiFi, Parking",False
+Ocean Plaza,Miami,149.74,4.0,385,Economy,"Pool, Free WiFi",False
+Ocean Resort,Los Angeles,287.37,3.1,242,Economy,"Pet friendly, Free WiFi",True
+Grand Haven,Chicago,474.24,2.6,703,Standard,"Pet friendly, Parking",False
+Green Suites,Miami,357.26,2.8,253,Deluxe,"Free WiFi, Breakfast included, Gym",True
+Royal Plaza,Chicago,441.25,3.7,328,Suite,"Free WiFi, Breakfast included, Pool, Gym",True
+Sunset Retreat,Miami,228.38,3.4,242,Deluxe,"Parking, Pool, Gym, Free WiFi",False
+Elegant Suites,Los Angeles,294.1,2.8,106,Economy,"Free WiFi, Pet friendly, Parking",False
+Golden Suites,San Francisco,470.08,3.2,579,Standard,"Pet friendly, Free WiFi",False
+Golden View,New York,255.83,4.0,556,Economy,"Breakfast included, Free WiFi, Parking, Gym, Pet friendly",True
+Ocean Suites,Los Angeles,278.3,3.6,898,Standard,"Pet friendly, Free WiFi, Pool, Gym",True
+Majestic Retreat,New York,275.24,3.3,922,Deluxe,"Free WiFi, Breakfast included, Pool, Pet friendly, Parking",False
+Green Inn,San Francisco,117.17,3.7,589,Standard,"Breakfast included, Pool",True
+Green Gardens,San Francisco,457.1,3.0,731,Deluxe,"Gym, Parking",False
+Grand Plaza,San Francisco,138.37,4.8,111,Deluxe,"Gym, Breakfast included, Free WiFi",True
+Golden Palace,Chicago,83.15,4.3,488,Deluxe,"Breakfast included, Parking, Free WiFi, Gym, Pool",True
+Urban Gardens,New York,104.98,3.5,103,Standard,"Pet friendly, Breakfast included, Gym, Parking",False
+Royal Inn,Chicago,315.06,4.0,916,Standard,"Pet friendly, Breakfast included, Parking, Pool",True
+Majestic Haven,San Francisco,131.62,3.2,269,Economy,"Breakfast included, Pool, Gym",False
+Ocean Haven,San Francisco,191.85,4.5,379,Deluxe,"Parking, Pet friendly, Free WiFi",True
+Golden Gardens,San Francisco,375.75,4.6,828,Standard,"Parking, Breakfast included, Gym, Pool, Pet friendly",True
+Green View,Chicago,398.83,4.2,264,Standard,"Free WiFi, Gym",False
+Ocean Palace,San Francisco,151.42,3.1,749,Economy,"Breakfast included, Pet friendly, Pool",False
+Golden Retreat,New York,385.35,3.5,127,Standard,"Free WiFi, Pool, Breakfast included, Gym",True
+Central Palace,San Francisco,372.57,2.7,392,Suite,"Gym, Breakfast included, Free WiFi, Parking, Pet friendly",False
+Grand Retreat,New York,362.73,2.7,539,Standard,"Gym, Free WiFi",False
+Elegant Plaza,San Francisco,180.62,3.5,61,Deluxe,"Gym, Pool, Breakfast included, Pet friendly",False
+Ocean Inn,Los Angeles,168.09,3.8,320,Economy,"Gym, Pet friendly, Free WiFi, Pool",False
+Sunset Resort,Chicago,393.9,4.4,190,Economy,"Pool, Parking, Breakfast included",True
+Ocean View,San Francisco,145.54,4.4,252,Suite,"Free WiFi, Pool, Breakfast included",True
