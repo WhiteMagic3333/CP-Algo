@@ -39,25 +39,25 @@ void solve()
 {
     int n;
     cin >> n;
-    vector<vector<int>> grid(n, vector<int> (n));
-    vector<vector<bool>> row_vis(n, vector<bool> (n + 2, false));
+    vector<vector<int>> ans(n, vector<int> (n, 0));
+    vector<bool> pres;
     for (int i = 0; i < n; i++) {
-        vector<bool> col_vis(n + 2, false);
-        int col_mex = 0;
         for (int j = 0; j < n; j++) {
-            int row_mex = 0;
-            while (row_vis[j][row_mex]) {
-                row_mex++;
+            int mex = 0;
+            pres = vector<bool> (102, false);
+            for (int i2 = 0; i2 < i; i2++) {
+                pres[ans[i2][j]] = true;
             }
-            int mex = min(col_mex, row_mex);
-            row_vis[j][mex] = col_vis[mex] = true;
-            grid[i][j] = mex;
-            while (col_vis[col_mex]) {
-                col_mex++;
+            for (int j2 = 0; j2 < j; j2++) {
+                pres[ans[i][j2]] = true;
             }
+            while (pres[mex]) {
+                mex++;
+            }
+            ans[i][j] = mex;
         }
     }
-    for (auto &row : grid) {
+    for (auto &row : ans) {
         cout << row;
     }
 }
