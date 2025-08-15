@@ -7,7 +7,7 @@
 1. Always look for patterns
 2. Try thinking for different approaches (dp, binary search, math, graphs, cycle finding) as well
 3. multiset.erase(multiset.find(element)) instead of multiset.erase(element)
-4. Capital YES (only in codeforces) (Ensure Ouput is in lowercase/uppercase as per the problem)
+4. Capital YES (only in codeforces) (Ensure Output is in lowercase/uppercase as per the problem)
 
 Varible names
 ga = greates_after (suffix array)
@@ -79,3 +79,6 @@ so better use
 if (m.count(x)) {
 	//you logic here
 }
+
+Dont implement Problems firsthand, try to build the logic first then the code, must for harder problems
+
