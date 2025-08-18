@@ -82,3 +82,4 @@ if (m.count(x)) {
 
 Dont implement Problems firsthand, try to build the logic first then the code, must for harder problems
 
+When using next_permutation do while loop, sort the array first to get all permutations.
