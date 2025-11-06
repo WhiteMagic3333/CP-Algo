@@ -1,0 +1,27 @@
+3 X 3 matrix
+
+a b c
+d e f
+g h i
+
+
+for each element we have 9 choices - 1 to 9
+
+total spaces - 9
+total combination = 9 ^ 9 = tle
+
+but
+brute force a,b,c,d
+
+sum = a + b + c
+
+g = sum - (a + d)
+e = sum - (c + g)
+f = sum - (d + e)
+h = sum - (e + b)
+i = sum - (c + f)
+
+validate
+if (correct)
+check min diff with cur array
+ans = min(ans, min_diff);
