@@ -1,0 +1,17 @@
+Crawler for Microsoft Jobs
+
+Initial Expections
+
+1. Run a script and get jobs(job name, role, place, posted on)
+2. Get Jobs Pasted on the browser
+
+Terminal or Excel 
+
+
+____________________________________________________________________
+Todo
+
+1. Total jobs count validattion
+2. Time ts to be fixed
+
+
