@@ -38,7 +38,7 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 void solve()
 {
 	srand(time(0));
-	ll big = 1e18, small = 1e9;
+	ll big = 1e9, small = 1;
 	ll n = (rand() * 1LL + (big - small)) % (big + 1LL);
 	ll ch = rand() % 2;
 	if(ch % 2)
