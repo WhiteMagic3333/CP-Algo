@@ -88,3 +88,11 @@ multiset.lower_bound() works in O(log(n))
 
 but
 lower_bound(multiset.begin(), multiset.end(), val) works in O(N)
+
+Based on the last contest freshness is imp to give contests not for practise tho,
+
+also sleep on time, get fresh early in the morning.
+
+Need to improve integrations of advanced data structers
+
+also need to create a debugger in templates
