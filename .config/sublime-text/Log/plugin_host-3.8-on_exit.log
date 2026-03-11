@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/whitemagic/.config/sublime-text/Installed Packages/LSP.sublime-package/plugin/core/windows.py", line 404, in destroy
+  File "/home/whitemagic/.config/sublime-text/Installed Packages/LSP.sublime-package/plugin/core/windows.py", line 344, in _end_sessions_async
+  File "/home/whitemagic/.config/sublime-text/Installed Packages/LSP.sublime-package/plugin/core/sessions.py", line 2441, in end_async
+  File "/home/whitemagic/.config/sublime-text/Installed Packages/LSP.sublime-package/plugin/core/sessions.py", line 2456, in shutdown_session_view_async
+  File "/home/whitemagic/.config/sublime-text/Installed Packages/LSP.sublime-package/plugin/session_view.py", line 294, in shutdown_async
+  File "/home/whitemagic/.config/sublime-text/Installed Packages/LSP.sublime-package/plugin/documents.py", line 277, in on_session_shutdown_async
+  File "/home/whitemagic/.config/sublime-text/Installed Packages/LSP.sublime-package/plugin/session_view.py", line 85, in on_before_remove
+  File "/home/whitemagic/.config/sublime-text/Installed Packages/LSP.sublime-package/plugin/session_view.py", line 400, in clear_code_lenses_async
+  File "/opt/sublime_text/Lib/python38/sublime.py", line 4008, in update
+    for phantom, region in zip(self.phantoms, regions):
+TypeError: 'NoneType' object is not iterable

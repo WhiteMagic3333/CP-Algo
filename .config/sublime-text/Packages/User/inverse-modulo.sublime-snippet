@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+ll modInverse(ll A, ll M)
+{
+    for (ll X = 1; X < M; X++)
+        if (((A % M) * (X % M)) % M == 1)
+            return X;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>inv_mod</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

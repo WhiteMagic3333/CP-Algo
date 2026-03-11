@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[dx >= 0 && dx < n && dy >= 0 && dy < n]]></content>
+  <tabTrigger>check_four_directions</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

@@ -1,0 +1,47 @@
+[
+
+	{ "keys": ["alt+w"], "command": "close" },
+	{ "keys": ["ctrl+backspace"], "command": "terminus_keypress", "args": {"key": "backspace", "alt": true}, "context": [{"key": "terminus_view"}] },
+	{ "keys": ["alt+v"], "command": "paste" },
+	{ "keys": ["alt+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },	
+	{ "keys": ["alt+y"], "command": "redo_or_repeat" },
+	{ "keys": ["alt+z"], "command": "undo" },
+	{ "keys": ["insert"], "command": "toggle_overwrite" },
+	{ "keys": ["alt+a"], "command": "select_all" },
+	{ "keys": ["alt+c"], "command": "copy"},
+	{ "keys": ["alt+x"], "command": "cut"},
+	{ "keys": ["alt+b"], "command": "build", "args": {"select": true} },
+	{ "keys": ["alt+s"], "command": "save"},
+	{ "keys": ["alt+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+	{ "keys": ["alt+h"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+	{ "keys": ["ctrl+j"], "command": "move", "args": {"by": "words", "forward": false} },
+	{ "keys": ["ctrl+l"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+	{ "keys": ["alt+i"], "command": "scroll_lines", "args": {"amount": 1.0 } },
+	{ "keys": ["alt+k"], "command": "scroll_lines", "args": {"amount": -1.0 } },
+	{ "keys": ["ctrl+i"], "command": "move", "args": {"by": "lines", "forward": false} },
+	{ "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": true} },
+	{
+	    "keys": ["ctrl+alt+3"], "command": "set_layout", "args": {
+	        "cols": [0.0, 0.33, 0.66, 1.0],
+	        "rows": [0.0, 1.0],
+	        "cells": [
+	            {"row": 0, "col": 0, "rowspan": 1, "colspan": 1},
+	            {"row": 0, "col": 1, "rowspan": 1, "colspan": 1},
+	            {"row": 0, "col": 2, "rowspan": 1, "colspan": 1}
+	        ]
+	    },
+	},
+	{
+		"keys": ["alt+shift+5"],
+		"command": "set_layout",
+		"args": {
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 0.5, 1.0],
+			"cells": [
+				[0, 0, 1, 2],  // Left column (full height)
+				[1, 0, 2, 1],  // Top-right pane
+				[1, 1, 2, 2]   // Bottom-right pane
+			]
+		}
+	}
+]

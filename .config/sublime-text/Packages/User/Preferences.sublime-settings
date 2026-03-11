@@ -1,0 +1,14 @@
+{
+	"color_scheme": "Packages/Colorsublime - Themes/cache/Colorsublime-Themes-master/themes/Monokai.tmTheme",
+	"theme": "Adaptive.sublime-theme",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"font_size": 13,
+	"font_face":"Monospace",
+	"save_on_focus_lost": true,
+	/*"save_on_focus_lost": true,*/
+	"index_files": true,
+	"translate_tabs_to_spaces": true,
+}

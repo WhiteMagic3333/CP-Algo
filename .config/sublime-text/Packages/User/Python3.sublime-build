@@ -1,0 +1,7 @@
+{
+// "cmd" : ["python3 $file_name -o $file_base_name && timeout 4s ./$file_base_name<inputf.in>outputf.out"], 
+"cmd" : ["python3 ${file}<${file_path}/inputf.in>${file_path}/outputf.out"],
+"selector" : "source.",
+"shell": true,
+"working_dir" : "$file_path"
+}
