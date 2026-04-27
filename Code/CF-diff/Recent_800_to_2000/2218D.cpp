@@ -36,7 +36,8 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 }
  
 void solve()
-{
+{   
+    //seems like a sweet spot
     //17:50 (rated 1100) adhoc logic is slow
     //improve speed on constructing test cases
     ll n;

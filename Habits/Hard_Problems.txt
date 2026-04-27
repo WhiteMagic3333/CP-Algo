@@ -1,0 +1,3 @@
+1. if a problem does not click, write some test cases to analyze the problem a little more
+1.1 Also dry run all test cases given specially in 1100-1400 cf
+2. use debugger
