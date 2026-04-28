@@ -1,11 +1,8 @@
-#include <unordered_map>
-#include <vector>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
 #include<bits/stdc++.h>
 #endif
-#include <set>
 using namespace std;
 typedef long long ll;
 #define mod 1000000007
@@ -39,37 +36,40 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 }
  
 void solve()
-{   
-
-    //got stuck greed math 30 + mins
-    int n;
-    cin >> n;
-    vector<ll> b(n);
-    cin >> b;
-
-    //b[i + 1] - b[i] = 1 additional value from new set arr[i], then in how many subarrays does it increase
-    //b[i + 1] - b[i] = 1 + no of subsets that does not contain new value
-
-    vector<int> ans(1);
-    int last = 1;
-    ans[0] = 1;
-    last++;
-    int subsets = 1; 
-    for (int i = 1; i < n; i++) {
-        int add_to_subsets = b[i] - b[i - 1] - 1;
-        if (add_to_subsets == subsets) {
-            ans.push_back(last);
-            last++;
-        } else {
-            int freq = subsets - add_to_subsets;
-            ans.push_back(ans[freq - 1]); //get the most frequent one because all subarray before that will have no increments
-        }
-        subsets++;
+{   //took too long 21 mins, althought the problem seemed fairly easy, i felt sleepy and slow
+    ll n, k;
+    cin >> n >> k;
+    // we can do RL or LR or UD DU or UUD but not n2 - 1
+    vector<string> grid(n, string(n, 'U'));
+    k = n * n - k; //k here is not allowed
+    if (k == 1) {
+        cout << "No\n";
+        return;
     }
-    cout << ans;
+    cout << "Yes\n";
+    if (n <= k) {
+        grid[0][0] = 'D';
+        k -= n;
+    } else if (k) {
+        grid[n - k][0] = 'D';
+        k = 0;
+    }
+    for (int i = 1; i < n && k; i++) {
+        if (n <= k) {
+            grid[0][i] = 'L';
+            k -= n;
+        } else if (k) {
+            grid[n - k][i] = 'L';
+            k = 0;
+        }
+    }
+    for (auto &row : grid) {
+        cout << row << "\n";
+    }
 }
-
-int main() {
+ 
+int main()
+{
     ios_base::sync_with_stdio(0);
     cin.tie(0);
  
