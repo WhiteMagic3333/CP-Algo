@@ -116,10 +116,21 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias atcoder='cd /home/whitemagic/Documents/CP-Algo/Code/Atcoder'
-
 alias cf='cd /home/whitemagic/Documents/CP-Algo/Code/cf'
 
 alias diff='cd /home/whitemagic/Documents/CP-Algo/Code/CF-diff/Recent_800_to_2000'
 
 alias codechef='cd /home/whitemagic/Documents/CP-Algo/Code/Codechef'
+
+alias atcoder='cd /home/whitemagic/Documents/CP-Algo/Code/Atcoder'
+
+input() {
+    subl --command "close_all"
+    
+    subl --command "set_layout {\"cols\": [0.0, 0.5, 1.0], \"rows\": [0.0, 0.5, 1.0], \"cells\": [[0, 0, 1, 2], [1, 0, 2, 1], [1, 1, 2, 2]]}"
+    
+    subl --command "focus_group {\"group\": 1}" && subl inputf.in
+    subl --command "focus_group {\"group\": 2}" && subl outputf.out
+    
+    subl --command "focus_group {\"group\": 0}"
+}

@@ -10,42 +10,35 @@
 using namespace std;
 typedef long long ll;
 
+void print(array<int, 3> it) {
+    cout << it[0] << " " << it[1] << "\n";
+}
+
 void solve()
 {
     int n, m;
     cin >> n >> m;
 
-    vector<vector<pair<int, int>>> by_L(n + 2);
-    vector<vector<pair<int, int>>> by_R(n + 2);
+    vector<array<int, 3>> LR, RL;
     
     for (int i = 1; i <= m; i++) {
         int s, e;
         cin >> s >> e;
-        by_L[s].push_back({e, i});
-        by_R[e].push_back({s, i});
+        LR.push_back({s, e, i - 1});
+        RL.push_back({e, s, i - 1});
     }
 
-    for (int i = 1; i <= n; i++) {
-        sort(by_L[i].begin(), by_L[i].end());   // Sorted by R ascending
-        sort(by_R[i].begin(), by_R[i].end());   // Sorted by L ascending
-    }
+    sort(LR.begin(), LR.end());
+    sort(RL.begin(), RL.end());
 
-    vector<vector<pair<int, int>>> min_R(n + 2);
-    for (int i = n; i >= 1; i--) {
-        vector<pair<int, int>> candidates;
-        for (int j = 0; j < min(2, (int)by_L[i].size()); j++) {
-            candidates.push_back(by_L[i][j]);
+    vector<bool> it_covers_other(m, false);
+
+    int mn = 1e9 + 1;
+    for (int i = m - 1; i >= 0; i--) {
+        if (mn <= LR[i][1] || (i != 0 && LR[i][0] == LR[i - 1][0])) {
+            it_covers_other[LR[i][2]] = true;
         }
-        if (i < n) {
-            for (auto p : min_R[i + 1]) {
-                candidates.push_back(p);
-            }
-        }
-        sort(candidates.begin(), candidates.end());
-        
-        for (int j = 0; j < min(2, (int)candidates.size()); j++) {
-            min_R[i].push_back(candidates[j]);
-        }
+        mn = min(LR[i][1], mn);
     }
 
     int q;
@@ -54,50 +47,20 @@ void solve()
         int l, r;
         cin >> l >> r;
 
-        bool possible = false;
-
-        vector<pair<int, int>> best_A;
-        auto itA = upper_bound(by_L[l].begin(), by_L[l].end(), make_pair(r + 1, -1));
-        if (itA != by_L[l].begin()) {
-            itA--;
-            best_A.push_back(*itA);
-            if (itA != by_L[l].begin()) {
-                itA--;
-                best_A.push_back(*itA);
+        auto it = lower_bound(LR.begin(), LR.end(), array<int, 3>{l, r, 0});
+        
+        if (it != LR.end() && (*it)[0] == l && (*it)[1] == r) {
+            cout << (it_covers_other[(*it)[2]] ? "Yes\n" : "No\n");
+        } 
+        else {
+            auto it2 = lower_bound(RL.begin(), RL.end(), array<int, 3>{r, l, 0});
+            
+            if (it != LR.begin() && (*--it)[0] == l && it2 != RL.end() && (*it2)[0] == r && (*it2)[1] <= (*it)[1] + 1) {
+                cout << "Yes\n";
+            } else {
+                cout << "No\n";
             }
         }
-
-        vector<pair<int, int>> best_B;
-        auto itB = lower_bound(by_R[r].begin(), by_R[r].end(), make_pair(l, -1));
-        if (itB != by_R[r].end()) {
-            best_B.push_back(*itB);
-            auto nxtB = itB; nxtB++;
-            if (nxtB != by_R[r].end()) {
-                best_B.push_back(*nxtB);
-            }
-        }
-
-        for (auto A : best_A) {
-            for (auto B : best_B) {
-                if (A.second != B.second) { \
-                    if (A.first + 1 >= B.first) { 
-                        possible = true;
-                    }
-                }
-            }
-        }
-
-        if (!best_A.empty() && best_A[0].first == r) {
-            int exact_id = best_A[0].second;
-            for (auto p : min_R[l]) {
-                if (p.second != exact_id && p.first <= r) {
-                    possible = true;
-                }
-            }
-        }
-
-        if (possible) cout << "Yes\n";
-        else cout << "No\n";
     }
 }
 
