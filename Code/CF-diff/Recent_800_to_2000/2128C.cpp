@@ -1,4 +1,3 @@
-#include <numeric>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
@@ -37,45 +36,21 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
 }
  
 void solve()
-{   //took 8 mins to implement too long
-    int n, m;
-    cin >> n >> m;
-    vector<vector<int>> g1(n);
-    vector<vector<int>> g2(n);
-    for (int j = 0; j < n; j++) {
-        for (int i = 0; i < m; i++) {
-            char ch;
-            cin >> ch;
-            g1[j].push_back(ch - '0');
-        }
-    }
-    for (int j = 0; j < n; j++) {
-        for (int i = 0; i < m; i++) {
-            char ch;
-            cin >> ch;
-            g2[j].push_back(ch - '0');
-        }
-    }
-    for (int i = 0; i < n; i++) {
-        int s1 = accumulate(g1[i].begin(), g1[i].end(), 0LL) % 3;
-        int s2 = accumulate(g2[i].begin(), g2[i].end(), 0LL) % 3;
-        if (s1 != s2) {
+{
+    //then we can add anthing but
+    //arr[i] = min(arr[0 ... i - 1]) * 2 - 1
+    //11 mins
+    int n;
+    cin >> n;
+    vector<int> b(n);
+    cin >> b;
+    int mn = 1e9 + 1;
+    for (auto i : b) {
+        if (i > (mn * 2 - 1)) {
             cout << "No";
             return;
         }
-    }
-    for (int j = 0; j < m; j++) {
-        int s1 = 0,  s2 = 0;
-        for (int i = 0; i < n; i++) {
-            s1 += g1[i][j];
-            s2 += g2[i][j];
-        }
-        s1 %= 3;
-        s2 %= 3;
-        if (s1 != s2) {
-            cout << "No";
-            return;
-        }
+        mn = min(mn, i);
     }
     cout << "Yes";
 }
