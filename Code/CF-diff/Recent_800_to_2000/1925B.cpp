@@ -7,7 +7,7 @@ using namespace std;
 typedef long long ll;
 #define mod 1000000007
 vector<bool> prime;
- 
+
 void sieve(ll n)
 {
     prime.resize(n + 1, true);
@@ -34,42 +34,32 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
     std::cout << '\n';
     return out;
 }
-
-ll nc2(ll n) { //template
-    return (n * (n - 1)) / 2;
-}
-
-ll nc3(ll n) { //template
-    ll cur = (n * (n - 1)) / 2;
-    cur = (cur * (n - 2)) / 3;
-    return cur;
-}
  
 void solve()
-{   //17 mins
-    int n;
-    cin >> n;
-    vector<int> a(n);
-    cin >> a;
-    vector<ll> cnt(n + 1, 0);
-    for (auto i : a) {
-        cnt[i]++;
+{   //i did n / x instead of x / n and got wa
+    //12 mins to 15 mins instead
+    ll x, n;
+    cin >> x >> n;
+    //(x - factor * (n - 1)) % factor == 0
+    if (x % n == 0) {
+        cout << x / n;
+        return;
     }
-
-    //sum of two sides > third side
-    ll ans = 0;
-    //ncr ans
-    ll smaller = 0;
-    for (auto i : cnt) {
-        if (i > 2) {
-            ans += nc3(i);
-        } 
-        if (i > 1) {
-            ans += nc2(i) * smaller;
+    // gcd, gcd, gcd, gcd, gcd * something
+    int ans = 1;
+    for (int i = 1; i * i <= x; i++) {
+        if (x % i == 0) {
+            int f = i, s = x / i;
+            if ((x / f) >= n) {
+                ans = max(ans, f);
+            }
+            if ((x / s) >= n) {
+                ans = max(ans, s);
+            }
         }
-        smaller += i;
     }
     cout << ans;
+
 }
  
 int main()

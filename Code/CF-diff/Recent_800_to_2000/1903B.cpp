@@ -34,44 +34,38 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
     std::cout << '\n';
     return out;
 }
-
-ll nc2(ll n) { //template
-    return (n * (n - 1)) / 2;
-}
-
-ll nc3(ll n) { //template
-    ll cur = (n * (n - 1)) / 2;
-    cur = (cur * (n - 2)) / 3;
-    return cur;
-}
  
 void solve()
-{   //17 mins
+{   //30 mins didnt get the idea at first
+    //also interestingly in bit problems
+    //think of how bits will change after each operation
     int n;
     cin >> n;
-    vector<int> a(n);
-    cin >> a;
-    vector<ll> cnt(n + 1, 0);
-    for (auto i : a) {
-        cnt[i]++;
+    vector<vector<int>> grid(n, vector<int> (n));
+    for (auto &row : grid) {
+        cin >> row;
     }
-
-    //sum of two sides > third side
-    ll ans = 0;
-    //ncr ans
-    ll smaller = 0;
-    for (auto i : cnt) {
-        if (i > 2) {
-            ans += nc3(i);
-        } 
-        if (i > 1) {
-            ans += nc2(i) * smaller;
+    vector<int> a(n, ((1 << 30) - 1));
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j) {
+                continue;
+            }
+            a[i] &= grid[i][j];
         }
-        smaller += i;
     }
-    cout << ans;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i != j && (a[i] | a[j]) != grid[i][j]) {
+                cout << "No\n";
+                return;
+            }
+        }
+    }
+    cout << "Yes\n";
+    cout << a;
 }
- 
+
 int main()
 {
     ios_base::sync_with_stdio(0);
@@ -82,7 +76,6 @@ int main()
     while (t--)
     {
         solve();
-        cout << "\n";
     }
     return 0;
 }

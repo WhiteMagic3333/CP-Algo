@@ -3,6 +3,7 @@
 #else
 #include<bits/stdc++.h>
 #endif
+#include <unordered_set>
 using namespace std;
 typedef long long ll;
 #define mod 1000000007
@@ -34,42 +35,33 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
     std::cout << '\n';
     return out;
 }
-
-ll nc2(ll n) { //template
-    return (n * (n - 1)) / 2;
-}
-
-ll nc3(ll n) { //template
-    ll cur = (n * (n - 1)) / 2;
-    cur = (cur * (n - 2)) / 3;
-    return cur;
-}
  
 void solve()
-{   //17 mins
+{
+    //n people upto 100
+    //each says atleast l[i] liers amongst us
+
+    //after looking at the constraints brutforces was clear
+    //but i unnecessarily optimzed resulting wrong answer
+    //20 mins+
     int n;
     cin >> n;
-    vector<int> a(n);
-    cin >> a;
-    vector<ll> cnt(n + 1, 0);
-    for (auto i : a) {
-        cnt[i]++;
-    }
-
-    //sum of two sides > third side
-    ll ans = 0;
-    //ncr ans
-    ll smaller = 0;
-    for (auto i : cnt) {
-        if (i > 2) {
-            ans += nc3(i);
-        } 
-        if (i > 1) {
-            ans += nc2(i) * smaller;
+    vector<int> arr(n);
+    cin >> arr;
+    for (int liars = 0; liars <= n; liars++) {
+        //so l liars then n - l are speaking the truth and only last differs
+        int cnt_liars = 0;
+        for (auto i : arr) {
+            if (i > liars) {
+                cnt_liars++;
+            }
         }
-        smaller += i;
+        if (cnt_liars == liars) {
+            cout << liars;
+            return;
+        }
     }
-    cout << ans;
+    cout << "-1";
 }
  
 int main()
