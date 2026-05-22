@@ -1,3 +1,4 @@
+#include <filesystem>
 #ifndef ONLINE_JUDGE
 #include "magic.h"
 #else
@@ -36,28 +37,50 @@ std::ostream& operator<<(std::ostream&out, std::vector<T>& v) {
     return out;
 }
  
+// void solve()
+// {
+//     //n people upto 100
+//     //each says atleast l[i] liers amongst us
+
+//     //after looking at the constraints brutforces was clear
+//     //but i unnecessarily optimzed resulting wrong answer
+//     //20 mins+
+//     int n;
+//     cin >> n;
+//     vector<int> arr(n);
+//     cin >> arr;
+//     for (int liars = 0; liars <= n; liars++) {
+//         //so l liars then n - l are speaking the truth and only last differs
+//         int cnt_liars = 0;
+//         for (auto i : arr) {
+//             if (i > liars) {
+//                 cnt_liars++;
+//             }
+//         }
+//         if (cnt_liars == liars) {
+//             cout << liars;
+//             return;
+//         }
+//     }
+//     cout << "-1";
+// }
+
 void solve()
 {
     //n people upto 100
     //each says atleast l[i] liers amongst us
-
-    //after looking at the constraints brutforces was clear
-    //but i unnecessarily optimzed resulting wrong answer
-    //20 mins+
     int n;
     cin >> n;
     vector<int> arr(n);
     cin >> arr;
-    for (int liars = 0; liars <= n; liars++) {
-        //so l liars then n - l are speaking the truth and only last differs
-        int cnt_liars = 0;
-        for (auto i : arr) {
-            if (i > liars) {
-                cnt_liars++;
-            }
+    sort(arr.begin(), arr.end());
+    for (int i = 0; i < n; i++) {
+        while (i + 1 < n && arr[i] == arr[i + 1]) {
+            i++;
         }
-        if (cnt_liars == liars) {
-            cout << liars;
+        int rem = n - i - 1;
+        if (rem >= arr[i] && (i == n - 1 || rem < arr[i + 1])) {
+            cout << rem;
             return;
         }
     }
